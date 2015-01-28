@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:lulinqing@foxmail.com
+email: lulinqing@foxmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -101,4 +101,4 @@ google_analytics_tracking_id:
 facebook_like: false
 
 # weibo
-weibo_share:true
+weibo_share: true

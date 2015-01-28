@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios开发 | 老卢的试验田]]></title>
   <link href="//blog/categories/ioskai-fa/atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-01-28T20:08:35+08:00</updated>
+  <updated>2015-01-28T20:16:01+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -20,33 +20,17 @@
     <id>//blog/2015/01/28/iosxue-xi-zi-yuan-ji-jin</id>
     <content type="html"><![CDATA[<h2>优秀博客</h2>
 
-
-
-
 <p><a href="devtang.com">唐巧的技术博客</a><br/>
 <a href="https://github.com/tangqiaoboy/iOSBlogCN">中文iOS/Mac开发博客列表</a><br/>
 <a href="nshipster.cn">NSHipster</a>:关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。</p>
 
-
-
-
 <h2>资源网站</h2>
-
-
-
 
 <p><a href="www.cocoachina.com">CocoaChina</a></p>
 
-
-
-
 <h2>开源项目</h2>
 
-
-
-
-<p><a href="">AFNetworking</a></p>
-
+<p><a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a></p>
 ]]></content>
   </entry>
   

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 杂谈 | 老卢的试验田]]></title>
-  <link href="//blog/categories/za-tan/atom.xml" rel="self"/>
-  <link href="//"/>
-  <updated>2015-01-30T20:34:56+08:00</updated>
-  <id>//</id>
+  <link href="http://linqing-lu.github.io/blog/categories/za-tan/atom.xml" rel="self"/>
+  <link href="http://linqing-lu.github.io/"/>
+  <updated>2015-01-30T20:37:46+08:00</updated>
+  <id>http://linqing-lu.github.io/</id>
   <author>
     <name><![CDATA[卢林清]]></name>
     <email><![CDATA[lulinqing@foxmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[第一篇博客]]></title>
-    <link href="//blog/2015/01/28/di-%5B%3F%5D-pian-bo-ke/"/>
+    <link href="http://linqing-lu.github.io/blog/2015/01/28/di-%5B%3F%5D-pian-bo-ke/"/>
     <updated>2015-01-28T09:24:35+08:00</updated>
-    <id>//blog/2015/01/28/di-[?]-pian-bo-ke</id>
+    <id>http://linqing-lu.github.io/blog/2015/01/28/di-[?]-pian-bo-ke</id>
     <content type="html"><![CDATA[<p>这是我用octpress写的第一篇博客，我将利用此文来描述这个工程，博客发布在github pages和gitcafe pages上。</p>
 
 <h2>准备</h2>

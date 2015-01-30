@@ -6,11 +6,11 @@ comments: true
 categories: iOS开发
 ---
 ##优秀博客
-[唐巧的技术博客](devtang.com)  
+[唐巧的技术博客](http://devtang.com/blog/categories/ios/)  
 [中文iOS/Mac开发博客列表](https://github.com/tangqiaoboy/iOSBlogCN)  
-[NSHipster](nshipster.cn):关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。    
+[NSHipster](http://nshipster.cn):关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。    
 ##资源网站
-[CocoaChina](www.cocoachina.com)  
+[CocoaChina](http://www.cocoachina.com)  
 
 ##开源项目
 [AFNetworking](https://github.com/AFNetworking/AFNetworking)  

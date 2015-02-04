@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ios开发 | 老卢的试验田]]></title>
-  <link href="http://linqing-lu.github.io/blog/categories/ioskai-fa/atom.xml" rel="self"/>
-  <link href="http://linqing-lu.github.io/"/>
-  <updated>2015-01-30T20:37:46+08:00</updated>
-  <id>http://linqing-lu.github.io/</id>
+  <link href="//blog/categories/ioskai-fa/atom.xml" rel="self"/>
+  <link href="//"/>
+  <updated>2015-02-04T18:12:11+08:00</updated>
+  <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
     <email><![CDATA[lulinqing@foxmail.com]]></email>
@@ -15,31 +15,60 @@
   
   <entry>
     <title type="html"><![CDATA[iOS开发问题集锦]]></title>
-    <link href="http://linqing-lu.github.io/blog/2015/01/29/ioskai-fa-wen-ti-ji-jin/"/>
+    <link href="//blog/2015/01/29/ioskai-fa-wen-ti-ji-jin/"/>
     <updated>2015-01-29T20:52:09+08:00</updated>
-    <id>http://linqing-lu.github.io/blog/2015/01/29/ioskai-fa-wen-ti-ji-jin</id>
+    <id>//blog/2015/01/29/ioskai-fa-wen-ti-ji-jin</id>
     <content type="html"><![CDATA[<p>在iOS开发的过程中，遇到了不少坑，在这里，我把这些坑和对应的解决方法列出。</p>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS学习资源集锦]]></title>
-    <link href="http://linqing-lu.github.io/blog/2015/01/28/iosxue-xi-zi-yuan-ji-jin/"/>
+    <link href="//blog/2015/01/28/iosxue-xi-zi-yuan-ji-jin/"/>
     <updated>2015-01-28T19:56:33+08:00</updated>
-    <id>http://linqing-lu.github.io/blog/2015/01/28/iosxue-xi-zi-yuan-ji-jin</id>
+    <id>//blog/2015/01/28/iosxue-xi-zi-yuan-ji-jin</id>
     <content type="html"><![CDATA[<h2>优秀博客</h2>
+
+
+
 
 <p><a href="http://devtang.com/blog/categories/ios/">唐巧的技术博客</a><br/>
 <a href="https://github.com/tangqiaoboy/iOSBlogCN">中文iOS/Mac开发博客列表</a><br/>
-<a href="http://nshipster.cn">NSHipster</a>:关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。</p>
+<a href="http://nshipster.cn">NSHipster</a>:关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。<br/>
+<a href="http://onevcat.com">喵神的博客</a></p>
+
+
+
 
 <h2>资源网站</h2>
 
+
+
+
 <p><a href="http://www.cocoachina.com">CocoaChina</a></p>
+
+
+
 
 <h2>开源项目</h2>
 
+
+
+
 <p><a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a></p>
+
+
+
+
+<h2>优秀文章</h2>
+
+
+
+
+<p><a href="http://boboshone.com/blog/2013/04/22/blur-effect-in-ios/">iOS如何实现模糊效果</a><br/>
+<a href="http://www.cocoachina.com/ios/20150203/11089.html#rd">iOS 8 WebKit框架概览</a> WKWebView的使用，以及和UIWebKit的优势比较。</p>
+
 ]]></content>
   </entry>
   

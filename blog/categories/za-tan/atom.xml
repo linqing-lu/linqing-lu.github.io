@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 杂谈 | 老卢的试验田]]></title>
+  <link href="//blog/categories/za-tan/atom.xml" rel="self"/>
+  <link href="//"/>
+  <updated>2015-02-04T18:12:11+08:00</updated>
+  <id>//</id>
+  <author>
+    <name><![CDATA[卢林清]]></name>
+    <email><![CDATA[lulinqing@foxmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[第一篇博客]]></title>
+    <link href="//blog/2015/01/28/di-%5B%3F%5D-pian-bo-ke/"/>
+    <updated>2015-01-28T09:24:35+08:00</updated>
+    <id>//blog/2015/01/28/di-[?]-pian-bo-ke</id>
+    <content type="html"><![CDATA[<p>这是我用octpress写的第一篇博客，我将利用此文来描述这个工程，博客发布在github pages和gitcafe pages上。</p>
+
+
+
+
+<h2>准备</h2>
+
+
+
+
+<h2>操作过程</h2>
+
+
+
+
+<h2>参考链接</h2>
+
+
+
+
+<p>如何利用gitpages写博客：<a href="http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/">唐巧</a><br/>
+另一个作者的描述：<a href="http://zerodie.github.io/blog/2012/01/19/octopress-github-pages/">李嘉林</a><br/>
+如何修改域名指向：<a href="http://devtang.com/blog/2014/06/02/use-gitcafe-to-host-blog/">唐巧</a></p>
+
+
+
+
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>this is code test</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+
+
+
+<p></p>
+
+
+
+
+<h2>用markdown语法写作</h2>
+
+
+
+
+<p>再也不用为文章格式纠结了。</p>
+
+]]></content>
+  </entry>
+  
+</feed>

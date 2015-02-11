@@ -18,4 +18,5 @@ categories: iOS开发
 
 ##优秀文章
 [iOS如何实现模糊效果](http://boboshone.com/blog/2013/04/22/blur-effect-in-ios/)    
-[iOS 8 WebKit框架概览](http://www.cocoachina.com/ios/20150203/11089.html#rd) WKWebView的使用，以及和UIWebKit的优势比较。  
+[iOS 8 WebKit框架概览](http://www.cocoachina.com/ios/20150203/11089.html#rd) WKWebView的使用，以及和UIWebKit的优势比较。   
+[全面理解iOS开发中的ScrollView](http://mobile.51cto.com/hot-430409.htm):详细描述了ScrollView实现的原理，并点拨了实现下拉刷新、避免键盘遮住有效区域的原理。  

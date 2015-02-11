@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios开发 | 老卢的试验田]]></title>
   <link href="//blog/categories/ioskai-fa/atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-02-05T17:36:38+08:00</updated>
+  <updated>2015-02-11T14:33:23+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -19,6 +19,8 @@
     <updated>2015-01-29T20:52:09+08:00</updated>
     <id>//blog/2015/01/29/ioskai-fa-wen-ti-ji-jin</id>
     <content type="html"><![CDATA[<p>在iOS开发的过程中，遇到了不少坑，在这里，我把这些坑和对应的解决方法列出。</p>
+
+<p>1.在iphone5s中，屏幕上下方有黑色空白。<a href="http://blog.csdn.net/tcthek/article/details/42674335">解决方法</a></p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,8 @@ categories: iOS开发
 [唐巧的技术博客](http://devtang.com/blog/categories/ios/)  
 [中文iOS/Mac开发博客列表](https://github.com/tangqiaoboy/iOSBlogCN)  
 [NSHipster](http://nshipster.cn):关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。  
-[喵神的博客](http://onevcat.com)    
+[喵神的博客](http://onevcat.com)  
+[objc中国](http://objccn.io):为中国Objective-C社区带来最佳实践和先进技术    
 ##资源网站
 [CocoaChina](http://www.cocoachina.com)  
 

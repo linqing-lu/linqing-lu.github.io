@@ -6,9 +6,9 @@ comments: true
 categories: 个人
 ---  
 
-最近在一本书(《程序员跳槽全攻略》)上看到用markdown写个人简历，觉得是给非常棒的主意，所以现在写一篇，暂存于此。
+最近在一本书[(《程序员跳槽全攻略》)](http://www.duokan.com/book/80213)上看到用markdown写个人简历，觉得是个非常棒的主意，所以现在写一篇，暂存于此。
 这样写简历的好处是：可以轻易转为PDF文档，格式比word容易控制，可以发到我的博客中。  
-[简历模板](https://github.com/geekcompany/DeerResume)
+[简历模板](https://github.com/geekcompany/DeerResume)  
 #联系方式
 
 
@@ -20,7 +20,7 @@ categories: 个人
 
 
 #开源项目和作品
-暂时还没有
+
 ##开源项目
 
 ##技术文章

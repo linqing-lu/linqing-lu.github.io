@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios开发 | 老卢的试验田]]></title>
   <link href="//blog/categories/ioskai-fa/atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-03-13T15:44:11+08:00</updated>
+  <updated>2015-03-13T15:59:14+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -20,11 +20,7 @@
     <id>//blog/2015/01/29/ioskai-fa-wen-ti-ji-jin</id>
     <content type="html"><![CDATA[<p>在iOS开发的过程中，遇到了不少坑，在这里，我把这些坑和对应的解决方法列出。</p>
 
-
-
-
 <p>1.在iphone5s中，屏幕上下方有黑色空白。<a href="http://blog.csdn.net/tcthek/article/details/42674335">解决方法</a></p>
-
 ]]></content>
   </entry>
   
@@ -35,9 +31,6 @@
     <id>//blog/2015/01/28/iosxue-xi-zi-yuan-ji-jin</id>
     <content type="html"><![CDATA[<h2>优秀博客</h2>
 
-
-
-
 <p><a href="http://devtang.com/blog/categories/ios/">唐巧的技术博客</a><br/>
 <a href="https://github.com/tangqiaoboy/iOSBlogCN">中文iOS/Mac开发博客列表</a><br/>
 <a href="http://nshipster.cn">NSHipster</a>:关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。<br/>
@@ -46,38 +39,19 @@
 <a href="http://www.codingtime.info/">一个女程序员的博客</a>：很多值得学习的知识<br/>
 <a href="http://blog.callmewhy.com/">Why&rsquo;s Blog</a>: 有干货</p>
 
-
-
-
 <h2>资源网站</h2>
-
-
-
 
 <p><a href="http://www.cocoachina.com">CocoaChina</a></p>
 
-
-
-
 <h2>开源项目</h2>
-
-
-
 
 <p><a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a></p>
 
-
-
-
 <h2>优秀文章</h2>
-
-
-
 
 <p><a href="http://boboshone.com/blog/2013/04/22/blur-effect-in-ios/">iOS如何实现模糊效果</a>  <br/>
 <a href="http://www.cocoachina.com/ios/20150203/11089.html#rd">iOS 8 WebKit框架概览</a> WKWebView的使用，以及和UIWebKit的优势比较。 <br/>
 <a href="http://mobile.51cto.com/hot-430409.htm">全面理解iOS开发中的ScrollView</a>:详细描述了ScrollView实现的原理，并点拨了实现下拉刷新、避免键盘遮住有效区域的原理。</p>
-
 ]]></content>
   </entry>
   

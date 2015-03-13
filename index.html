@@ -9,27 +9,9 @@
   <meta name="author" content="卢林清">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-UIImage *btnImage = [UIImage imageNamed:@"random_pair_selection_cancel_mode"]; CGFloat width = ( &hellip;">
+  <meta name="description" content="今天遇到了UI指定的按钮大小小于苹果所规定的热区44*44的情况，导致按钮很难点中，需要将热区放大；
+有一种方法需要子类化UIButton，比较繁琐；
+另外一种方法是，将按钮的frame放大到热区大小(44*44)， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,7 +89,11 @@ UIImage *btnImage = [UIImage imageNamed:@"random_pair_selection_cancel_mode"]; C
   </header>
 
 
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+  <div class="entry-content"><p>今天遇到了UI指定的按钮大小小于苹果所规定的热区44*44的情况，导致按钮很难点中，需要将热区放大；<br/>
+有<a href="http://itony.me/129.html">一种方法</a>需要子类化UIButton，比较繁琐；<br/>
+另外一种方法是，将按钮的frame放大到热区大小(44*44)，再通过setImageEdgeInsets改变按钮图片的显示大小为UI指定的大小即可，代码如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -189,8 +175,6 @@ UIImage *btnImage = [UIImage imageNamed:@"random_pair_selection_cancel_mode"]; C
 <h1>工作经历</h1>
 
 <h1>开源项目和作品</h1>
-
-<p>暂时还没有</p>
 
 <h2>开源项目</h2>
 

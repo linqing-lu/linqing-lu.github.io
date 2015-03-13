@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios小技巧 | 老卢的试验田]]></title>
   <link href="//blog/categories/iosxiao-ji-qiao/atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-03-13T15:44:11+08:00</updated>
+  <updated>2015-03-13T15:59:14+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -18,7 +18,11 @@
     <link href="//blog/2015/03/13/uibuttonre-qu-fang-da/"/>
     <updated>2015-03-13T15:34:41+08:00</updated>
     <id>//blog/2015/03/13/uibuttonre-qu-fang-da</id>
-    <content type="html"><![CDATA[<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+    <content type="html"><![CDATA[<p>今天遇到了UI指定的按钮大小小于苹果所规定的热区44*44的情况，导致按钮很难点中，需要将热区放大；<br/>
+有<a href="http://itony.me/129.html">一种方法</a>需要子类化UIButton，比较繁琐；<br/>
+另外一种方法是，将按钮的frame放大到热区大小(44*44)，再通过setImageEdgeInsets改变按钮图片的显示大小为UI指定的大小即可，代码如下：</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -38,32 +42,28 @@
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>UIImage *btnImage = [UIImage imageNamed:@"random_pair_selection_cancel_mode"];  
-</span><span class='line'>CGFloat width = (btnImage.size.width >= 44 ? btnImage.size.width : 44);  
-</span><span class='line'>CGFloat height = (btnImage.size.height >= 44 ? btnImage.size.height : 44);  
-</span><span class='line'>_btnClose = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width, height)];  
-</span><span class='line'>[_btnClose setImage:btnImage forState:UIControlStateNormal];    
-</span><span class='line'>[_btnClose addTarget:self action:@selector(closeButton:)   forControlEvents:UIControlEventTouchUpInside];  
-</span><span class='line'>CGRect frame = _btnClose.frame;  
-</span><span class='line'>frame.origin.x = SCREEN_WIDTH - 26 - btnImage.size.width;  
-</span><span class='line'>frame.origin.y = 41;  
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br/>
+</span><span class='line'>UIImage *btnImage = [UIImage imageNamed:@&ldquo;random_pair_selection_cancel_mode&rdquo;];&lt;br/>
+</span><span class='line'>CGFloat width = (btnImage.size.width >= 44 ? btnImage.size.width : 44);&lt;br/>
+</span><span class='line'>CGFloat height = (btnImage.size.height >= 44 ? btnImage.size.height : 44);&lt;br/>
+</span><span class='line'>&lt;em>btnClose = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width, height)];&lt;br/>
+</span><span class='line'>[&lt;/em>btnClose setImage:btnImage forState:UIControlStateNormal];  &lt;br/>
+</span><span class='line'>[&lt;em>btnClose addTarget:self action:@selector(closeButton:)   forControlEvents:UIControlEventTouchUpInside];&lt;br/>
+</span><span class='line'>CGRect frame = &lt;/em>btnClose.frame;&lt;br/>
+</span><span class='line'>frame.origin.x = SCREEN_WIDTH - 26 - btnImage.size.width;&lt;br/>
+</span><span class='line'>frame.origin.y = 41;&lt;/p>
 </span><span class='line'>
-</span><span class='line'>//放大热区后，保持图片显示不变  
-</span><span class='line'>if (btnImage.size.width &lt; width) {  
-</span><span class='line'>  width = (width - btnImage.size.width)/2;  
-</span><span class='line'>  height = (height - btnImage.size.height)/2;  
-</span><span class='line'>  [_btnClose setImageEdgeInsets:UIEdgeInsetsMake(height, width, height, width)];  
-</span><span class='line'>  //frame.origin.x = SCREEN_WIDTH - 26 - btnImage.size.width;  
-</span><span class='line'>  frame.origin.y = 41 - height;  
-</span><span class='line'>}
+</span><span class='line'>&lt;p>//放大热区后，保持图片显示不变&lt;br/>
+</span><span class='line'>if (btnImage.size.width &lt; width) {&lt;br/>
+</span><span class='line'>    width = (width - btnImage.size.width)/2;&lt;br/>
+</span><span class='line'>    height = (height - btnImage.size.height)/2;&lt;br/>
+</span><span class='line'>    [_btnClose setImageEdgeInsets:UIEdgeInsetsMake(height, width, height, width)];&lt;br/>
+</span><span class='line'>    //frame.origin.x = SCREEN_WIDTH - 26 - btnImage.size.width;&lt;br/>
+</span><span class='line'>    frame.origin.y = 41 - height;&lt;br/>
+</span><span class='line'>}&lt;/p>
 </span><span class='line'>
-</span><span class='line'>_btnClose.frame = frame;</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-
-
-
-<p></p>
-
+</span><span class='line'>&lt;p>_btnClose.frame = frame;   &lt;br/></span></code></pre></td></tr></table></div></figure></p>
 ]]></content>
   </entry>
   

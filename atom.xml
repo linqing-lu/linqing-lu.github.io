@@ -4,7 +4,7 @@
   <title><![CDATA[老卢的试验田]]></title>
   <link href="//atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-03-13T15:59:14+08:00</updated>
+  <updated>2015-03-13T15:59:56+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -73,7 +73,7 @@
     <link href="//blog/2015/03/12/wo-de-jian-li/"/>
     <updated>2015-03-12T09:44:36+08:00</updated>
     <id>//blog/2015/03/12/wo-de-jian-li</id>
-    <content type="html"><![CDATA[<p>最近在一本书<a href="http://www.duokan.com/book/80213">(《程序员跳槽全攻略》)</a>上看到用markdown写个人简历，觉得是给非常棒的主意，所以现在写一篇，暂存于此。
+    <content type="html"><![CDATA[<p>最近在一本书<a href="http://www.duokan.com/book/80213">(《程序员跳槽全攻略》)</a>上看到用markdown写个人简历，觉得是个非常棒的主意，所以现在写一篇，暂存于此。
 这样写简历的好处是：可以轻易转为PDF文档，格式比word容易控制，可以发到我的博客中。<br/>
 <a href="https://github.com/geekcompany/DeerResume">简历模板</a></p>
 

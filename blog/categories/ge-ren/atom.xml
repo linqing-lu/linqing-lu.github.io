@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 个人 | 老卢的试验田]]></title>
+  <link href="//blog/categories/ge-ren/atom.xml" rel="self"/>
+  <link href="//"/>
+  <updated>2015-04-03T08:55:46+08:00</updated>
+  <id>//</id>
+  <author>
+    <name><![CDATA[卢林清]]></name>
+    <email><![CDATA[lulinqing@foxmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[我的简历]]></title>
+    <link href="//blog/2015/03/12/wo-de-jian-li/"/>
+    <updated>2015-03-12T09:44:36+08:00</updated>
+    <id>//blog/2015/03/12/wo-de-jian-li</id>
+    <content type="html"><![CDATA[<p>最近在一本书<a href="http://www.duokan.com/book/80213">(《程序员跳槽全攻略》)</a>上看到用markdown写个人简历，觉得是个非常棒的主意，所以现在写一篇，暂存于此。
+这样写简历的好处是：可以轻易转为PDF文档，格式比word容易控制，可以发到我的博客中。<br/>
+<a href="https://github.com/geekcompany/DeerResume">简历模板</a></p>
+
+<h1>联系方式</h1>
+
+<h1>个人信息</h1>
+
+<h1>工作经历</h1>
+
+<h1>开源项目和作品</h1>
+
+<h2>开源项目</h2>
+
+<h2>技术文章</h2>
+
+<h2>演讲和讲义</h2>
+
+<h1>技能清单</h1>
+
+<h1>致谢</h1>
+
+<p>感谢您花时间阅读我的简历，期待能有机会和您公事。<br/>
+(感谢<a href="http://www.duokan.com/book/80213">《程序员跳槽全攻略》一书及其作者</a>)</p>
+]]></content>
+  </entry>
+  
+</feed>

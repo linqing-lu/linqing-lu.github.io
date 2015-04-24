@@ -4,7 +4,7 @@
   <title><![CDATA[老卢的试验田]]></title>
   <link href="//atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-02-04T18:12:11+08:00</updated>
+  <updated>2015-04-03T08:55:46+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -14,11 +14,114 @@
 
   
   <entry>
+    <title type="html"><![CDATA[UIButton热区放大]]></title>
+    <link href="//blog/2015/03/13/uibuttonre-qu-fang-da/"/>
+    <updated>2015-03-13T15:34:41+08:00</updated>
+    <id>//blog/2015/03/13/uibuttonre-qu-fang-da</id>
+    <content type="html"><![CDATA[<p>今天遇到了UI指定的按钮大小小于苹果所规定的热区44*44的情况，导致按钮很难点中，需要将热区放大；<br/>
+有<a href="http://itony.me/129.html">一种方法</a>需要子类化UIButton，比较繁琐；<br/>
+另外一种方法是，将按钮的frame放大到热区大小(44*44)，再通过setImageEdgeInsets改变按钮图片的显示大小为UI指定的大小即可，代码如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>
+</span><span class='line'><span class="bp">UIImage</span> <span class="o">*</span><span class="n">btnImage</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIImage</span> <span class="nl">imageNamed</span><span class="p">:</span><span class="s">@&quot;random_pair_selection_cancel_mode&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="n">CGFloat</span> <span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span> <span class="o">&gt;=</span> <span class="mi">44</span> <span class="o">?</span> <span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="nl">width</span> <span class="p">:</span> <span class="mi">44</span><span class="p">);</span>
+</span><span class='line'><span class="n">CGFloat</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">44</span> <span class="o">?</span> <span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="nl">height</span> <span class="p">:</span> <span class="mi">44</span><span class="p">);</span>
+</span><span class='line'><span class="n">_btnClose</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)];</span>
+</span><span class='line'><span class="p">[</span><span class="n">_btnClose</span> <span class="nl">setImage</span><span class="p">:</span><span class="n">btnImage</span> <span class="nl">forState</span><span class="p">:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">_btnClose</span> <span class="nl">addTarget</span><span class="p">:</span><span class="nb">self</span> <span class="nl">action</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">closeButton</span><span class="p">:)</span> <span class="nl">forControlEvents</span><span class="p">:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
+</span><span class='line'><span class="bp">CGRect</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">_btnClose</span><span class="p">.</span><span class="n">frame</span><span class="p">;</span>
+</span><span class='line'><span class="n">frame</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">SCREEN_WIDTH</span> <span class="o">-</span> <span class="mi">26</span> <span class="o">-</span> <span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">;</span>
+</span><span class='line'><span class="n">frame</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">41</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//放大热区后，保持图片显示不变  </span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="n">height</span> <span class="o">-</span> <span class="n">btnImage</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">_btnClose</span> <span class="nl">setImageEdgeInsets</span><span class="p">:</span><span class="n">UIEdgeInsetsMake</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)];</span>
+</span><span class='line'>  <span class="c1">//frame.origin.x = SCREEN_WIDTH - 26 - btnImage.size.width;  </span>
+</span><span class='line'>  <span class="n">frame</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">41</span> <span class="o">-</span> <span class="n">height</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">_btnClose</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[我的简历]]></title>
+    <link href="//blog/2015/03/12/wo-de-jian-li/"/>
+    <updated>2015-03-12T09:44:36+08:00</updated>
+    <id>//blog/2015/03/12/wo-de-jian-li</id>
+    <content type="html"><![CDATA[<p>最近在一本书<a href="http://www.duokan.com/book/80213">(《程序员跳槽全攻略》)</a>上看到用markdown写个人简历，觉得是个非常棒的主意，所以现在写一篇，暂存于此。
+这样写简历的好处是：可以轻易转为PDF文档，格式比word容易控制，可以发到我的博客中。<br/>
+<a href="https://github.com/geekcompany/DeerResume">简历模板</a></p>
+
+<h1>联系方式</h1>
+
+<h1>个人信息</h1>
+
+<h1>工作经历</h1>
+
+<h1>开源项目和作品</h1>
+
+<h2>开源项目</h2>
+
+<h2>技术文章</h2>
+
+<h2>演讲和讲义</h2>
+
+<h1>技能清单</h1>
+
+<h1>致谢</h1>
+
+<p>感谢您花时间阅读我的简历，期待能有机会和您公事。<br/>
+(感谢<a href="http://www.duokan.com/book/80213">《程序员跳槽全攻略》一书及其作者</a>)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Core Animation编程指南要点集锦]]></title>
+    <link href="//blog/2015/02/11/core-animationbian-cheng-zhi-nan-yao-dian-ji-jin/"/>
+    <updated>2015-02-11T17:25:40+08:00</updated>
+    <id>//blog/2015/02/11/core-animationbian-cheng-zhi-nan-yao-dian-ji-jin</id>
+    <content type="html"><![CDATA[<h2>1 在UIView中初始化动画</h2>
+
+<p>如果你想使用Core Animation初始化动画，你必须在一个基于视图的动画块内部执行所有Core Animaiton调用。UIView类默认是关闭图层动画的，你在动画块之外所做的改变都不是动画，但是你可在动画块中重新启用图层动画。清单3-5展示了一个关于如何隐式改变图层opacity和显式改变图层的position例子，在例子中myNewPosition变量被事先计算并被块所捕获。两个动画都开始于相同的时间，但透明度动画使用默认的定时，而位置动画使用动画对象指定的定时。</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[iOS开发问题集锦]]></title>
     <link href="//blog/2015/01/29/ioskai-fa-wen-ti-ji-jin/"/>
     <updated>2015-01-29T20:52:09+08:00</updated>
     <id>//blog/2015/01/29/ioskai-fa-wen-ti-ji-jin</id>
     <content type="html"><![CDATA[<p>在iOS开发的过程中，遇到了不少坑，在这里，我把这些坑和对应的解决方法列出。</p>
+
+<p>1.在iphone5s中，屏幕上下方有黑色空白。<a href="http://blog.csdn.net/tcthek/article/details/42674335">解决方法</a></p>
 ]]></content>
   </entry>
   
@@ -32,7 +135,10 @@
 <p><a href="http://devtang.com/blog/categories/ios/">唐巧的技术博客</a><br/>
 <a href="https://github.com/tangqiaoboy/iOSBlogCN">中文iOS/Mac开发博客列表</a><br/>
 <a href="http://nshipster.cn">NSHipster</a>:关注被忽略的Objective-C、Swift和Cocoa特性，每周更新。<br/>
-<a href="http://onevcat.com">喵神的博客</a></p>
+<a href="http://onevcat.com">喵神的博客</a><br/>
+<a href="http://objccn.io">objc中国</a>:为中国Objective-C社区带来最佳实践和先进技术 <br/>
+<a href="http://www.codingtime.info/">一个女程序员的博客</a>：很多值得学习的知识<br/>
+<a href="http://blog.callmewhy.com/">Why&rsquo;s Blog</a>: 有干货</p>
 
 <h2>资源网站</h2>
 
@@ -44,8 +150,9 @@
 
 <h2>优秀文章</h2>
 
-<p><a href="http://boboshone.com/blog/2013/04/22/blur-effect-in-ios/">iOS如何实现模糊效果</a><br/>
-<a href="http://www.cocoachina.com/ios/20150203/11089.html#rd">iOS 8 WebKit框架概览</a> WKWebView的使用，以及和UIWebKit的优势比较。</p>
+<p><a href="http://boboshone.com/blog/2013/04/22/blur-effect-in-ios/">iOS如何实现模糊效果</a>  <br/>
+<a href="http://www.cocoachina.com/ios/20150203/11089.html#rd">iOS 8 WebKit框架概览</a> WKWebView的使用，以及和UIWebKit的优势比较。 <br/>
+<a href="http://mobile.51cto.com/hot-430409.htm">全面理解iOS开发中的ScrollView</a>:详细描述了ScrollView实现的原理，并点拨了实现下拉刷新、避免键盘遮住有效区域的原理。</p>
 ]]></content>
   </entry>
   

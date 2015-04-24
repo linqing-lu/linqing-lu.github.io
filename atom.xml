@@ -4,7 +4,7 @@
   <title><![CDATA[老卢的试验田]]></title>
   <link href="//atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-04-03T08:55:46+08:00</updated>
+  <updated>2015-04-24T11:44:07+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[近期好文推荐]]></title>
+    <link href="//blog/2015/04/24/jin-qi-hao-wen-tui-jian/"/>
+    <updated>2015-04-24T11:30:50+08:00</updated>
+    <id>//blog/2015/04/24/jin-qi-hao-wen-tui-jian</id>
+    <content type="html"><![CDATA[<p>1、<a href="http://www.ruanyifeng.com/blog/2015/03/react.html">阮一峰：React入门实例教程</a>：写的通俗易懂，真的很适合入门，结合demo，瞬间能理解react<br/>
+2、<a href="http://www.jianshu.com/p/1bde36ad9938">轻松学习之一&ndash;Objective-C消息转发</a>:看完就明白了Objective-C消息转发是怎么一回事了</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[UIButton热区放大]]></title>
@@ -166,6 +176,31 @@
 <h2>准备</h2>
 
 <h2>操作过程</h2>
+
+<p>写新文章</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) #rake 'new_post[标题]'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+然后用markdown编辑工具，mac上推荐用<a href="">Mou</a>，编写文章,写完后，可以预览：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) #rake generate  
+</span><span class='line'>➜  octopress git:(source) #rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>发布文章</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) #rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
 
 <h2>参考链接</h2>
 

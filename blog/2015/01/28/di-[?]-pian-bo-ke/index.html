@@ -9,10 +9,8 @@
   <meta name="author" content="卢林清">
 
   
-  <meta name="description" content="这是我用octpress写的第一篇博客，我将利用此文来描述这个工程，博客发布在github pages和gitcafe pages上。 准备 操作过程 参考链接 如何利用gitpages写博客：唐巧
-另一个作者的描述：李嘉林
-如何修改域名指向：唐巧 1
-this is code test &hellip;">
+  <meta name="description" content="这是我用octpress写的第一篇博客，我将利用此文来描述这个工程，博客发布在github pages和gitcafe pages上。 准备 操作过程 写新文章 1
+➜ octopress git:(source) #rake 'new_post[标题]' 然后用markdown编辑工具， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +90,31 @@ this is code test &hellip;">
 <h2>准备</h2>
 
 <h2>操作过程</h2>
+
+<p>写新文章</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) #rake 'new_post[标题]'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+然后用markdown编辑工具，mac上推荐用<a href="">Mou</a>，编写文章,写完后，可以预览：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) #rake generate  
+</span><span class='line'>➜  octopress git:(source) #rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>发布文章</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) #rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
 
 <h2>参考链接</h2>
 
@@ -192,6 +215,10 @@ this is code test &hellip;">
   <a target="_blank" href="http://duobaohezi.cn/" title="夺宝盒子" >夺宝盒子</a>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/04/24/jin-qi-hao-wen-tui-jian/">近期好文推荐</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/03/13/uibuttonre-qu-fang-da/">UIButton热区放大</a>

@@ -8,8 +8,21 @@ categories: 杂谈
 这是我用octpress写的第一篇博客，我将利用此文来描述这个工程，博客发布在github pages和gitcafe pages上。
 ##准备
 
-##操作过程
+##操作过程  
+写新文章  
+{% codeblock %}  
+➜  octopress git:(source) #rake 'new_post[标题]'  
+{% endcodeblock %}  
+然后用markdown编辑工具，mac上推荐用[Mou]()，编写文章,写完后，可以预览：  
+{% codeblock %}  
+➜  octopress git:(source) #rake generate  
+➜  octopress git:(source) #rake preview 
+{% endcodeblock %}  
 
+发布文章  
+{% codeblock %}  
+➜  octopress git:(source) #rake deploy  
+{% endcodeblock %}  
 ##参考链接
 如何利用gitpages写博客：[唐巧](http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/)  
 另一个作者的描述：[李嘉林](http://zerodie.github.io/blog/2012/01/19/octopress-github-pages/)  

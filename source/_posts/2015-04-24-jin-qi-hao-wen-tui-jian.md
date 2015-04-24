@@ -1,0 +1,10 @@
+---
+layout: post
+title: "近期好文推荐"
+date: 2015-04-24 11:30:50 +0800
+comments: true  
+categories: 杂谈
+---
+1、[阮一峰：React入门实例教程](http://www.ruanyifeng.com/blog/2015/03/react.html)：写的通俗易懂，真的很适合入门，结合demo，瞬间能理解react  
+2、[轻松学习之一--Objective-C消息转发](http://www.jianshu.com/p/1bde36ad9938):看完就明白了Objective-C消息转发是怎么一回事了  
+

@@ -9,5 +9,5 @@ categories: 杂谈
 2、[轻松学习之一--Objective-C消息转发](http://www.jianshu.com/p/1bde36ad9938):看完就明白了Objective-C消息转发是怎么一回事了  
 3、[iOS应用架构谈：开篇](http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html):一个架构师关于架构的观点，值得仔细揣摩  
 4、[iOS应用架构谈：view层的组织和调用方案](http://casatwy.com/iosying-yong-jia-gou-tan-viewceng-de-zu-zhi-he-diao-yong-fang-an.html):作者写的很用心，看了一遍后收获很大，值得多看几遍然后参照进行实践，期待作者的后续文章。本文中还介绍了其他几篇相关好文，也很值得看。  
-
-
+5、[跳出面向对象思想：多态](http://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-er-duo-tai.html):又一篇引人深思的奇文，同系列共三篇文章，都值得一看。  
+6、[React-native之布局篇](https://github.com/tmallfe/tmallfe.github.io/issues/19)  

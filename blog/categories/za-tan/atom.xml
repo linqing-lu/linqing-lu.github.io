@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 杂谈 | 老卢的试验田]]></title>
   <link href="//blog/categories/za-tan/atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2015-04-03T08:55:46+08:00</updated>
+  <updated>2015-04-28T10:20:37+08:00</updated>
   <id>//</id>
   <author>
     <name><![CDATA[卢林清]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[近期好文推荐]]></title>
+    <link href="//blog/2015/04/24/jin-qi-hao-wen-tui-jian/"/>
+    <updated>2015-04-24T11:30:50+08:00</updated>
+    <id>//blog/2015/04/24/jin-qi-hao-wen-tui-jian</id>
+    <content type="html"><![CDATA[<p>1、<a href="http://www.ruanyifeng.com/blog/2015/03/react.html">阮一峰：React入门实例教程</a>：写的通俗易懂，真的很适合入门，结合demo，瞬间能理解react<br/>
+2、<a href="http://www.jianshu.com/p/1bde36ad9938">轻松学习之一&ndash;Objective-C消息转发</a>:看完就明白了Objective-C消息转发是怎么一回事了<br/>
+3、<a href="http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html">iOS应用架构谈：开篇</a>:一个架构师关于架构的观点，值得仔细揣摩<br/>
+4、<a href="http://casatwy.com/iosying-yong-jia-gou-tan-viewceng-de-zu-zhi-he-diao-yong-fang-an.html">iOS应用架构谈：view层的组织和调用方案</a>:作者写的很用心，看了一遍后收获很大，值得多看几遍然后参照进行实践，期待作者的后续文章。本文中还介绍了其他几篇相关好文，也很值得看。<br/>
+5、<a href="http://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-er-duo-tai.html">跳出面向对象思想：多态</a>:又一篇引人深思的奇文，同系列共三篇文章，都值得一看。<br/>
+6、<a href="https://github.com/tmallfe/tmallfe.github.io/issues/19">React-native之布局篇</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[第一篇博客]]></title>
@@ -23,6 +37,25 @@
 <h2>准备</h2>
 
 <h2>操作过程</h2>
+
+<p>写新文章<br/>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br/>
+</span><span class='line'>➜  octopress git:(source) #rake &lsquo;new_post[标题]&rsquo;&lt;br/></span></code></pre></td></tr></table></div></figure><br/>
+然后用markdown编辑工具，mac上推荐用<a href="">Mou</a>，编写文章,写完后，可以预览：<br/>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br/>
+</span><span class='line'>➜  octopress git:(source) #rake generate&lt;br/>
+</span><span class='line'>➜  octopress git:(source) #rake preview</span></code></pre></td></tr></table></div></figure></p>
+
+<p>发布文章<br/>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br/>
+</span><span class='line'>➜  octopress git:(source) #rake deploy&lt;br/></span></code></pre></td></tr></table></div></figure></p>
 
 <h2>参考链接</h2>
 

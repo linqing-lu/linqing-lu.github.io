@@ -13,8 +13,8 @@ categories: iOS开发
 [objc中国](http://objccn.io):为中国Objective-C社区带来最佳实践和先进技术   
 [一个女程序员的博客](http://www.codingtime.info/)：很多值得学习的知识  
 [Why's Blog](http://blog.callmewhy.com/): 有干货   
-[casatwy.com](casatwy.com)  
-[jiajun.org](jiajun.org)  
+[casatwy.com](http://casatwy.com)   
+[jiajun.org](http://jiajun.org)  
 ##资源网站
 [CocoaChina](http://www.cocoachina.com)  
 

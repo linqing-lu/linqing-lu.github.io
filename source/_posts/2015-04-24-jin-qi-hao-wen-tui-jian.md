@@ -5,9 +5,18 @@ date: 2015-04-24 11:30:50 +0800
 comments: true  
 categories: 杂谈
 ---
+---
 1、[阮一峰：React入门实例教程](http://www.ruanyifeng.com/blog/2015/03/react.html)：写的通俗易懂，真的很适合入门，结合demo，瞬间能理解react  
 2、[轻松学习之一--Objective-C消息转发](http://www.jianshu.com/p/1bde36ad9938):看完就明白了Objective-C消息转发是怎么一回事了  
 3、[iOS应用架构谈：开篇](http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html):一个架构师关于架构的观点，值得仔细揣摩  
 4、[iOS应用架构谈：view层的组织和调用方案](http://casatwy.com/iosying-yong-jia-gou-tan-viewceng-de-zu-zhi-he-diao-yong-fang-an.html):作者写的很用心，看了一遍后收获很大，值得多看几遍然后参照进行实践，期待作者的后续文章。本文中还介绍了其他几篇相关好文，也很值得看。  
 5、[跳出面向对象思想：多态](http://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-er-duo-tai.html):又一篇引人深思的奇文，同系列共三篇文章，都值得一看。  
 6、[React-native之布局篇](https://github.com/tmallfe/tmallfe.github.io/issues/19)  
+7、[正确使用Block，防止Cycle retain和crash](http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/)  
+8、[Github-iOS开源项目备忘](http://github.ibireme.com/github/list/ios/#):整理了Github上的各种iOS开源项目，分门别类，加以简短概述。  
+
+
+
+
+---  
+“平时学习控件，按照，继承关系、生命周期、内存管理、常用场景、个性定制、常见的坑。按照这个写个小博文。可能会好一些。” [知乎评论](http://www.zhihu.com/question/28997860)

@@ -14,8 +14,9 @@ categories: 杂谈
 6、[React-native之布局篇](https://github.com/tmallfe/tmallfe.github.io/issues/19)  
 7、[正确使用Block，防止Cycle retain和crash](http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/)  
 8、[Github-iOS开源项目备忘](http://github.ibireme.com/github/list/ios/#):整理了Github上的各种iOS开源项目，分门别类，加以简短概述。  
-
-
+9、[iOS:Crash文件解析(一)](http://www.cnblogs.com/smileEvday/p/Crash1.html):学习如何分析Crash文件，这应该是一个iOS开发者必会的基本技能吧。  
+10、[简明vim练级攻略](http://mp.weixin.qq.com/s?__biz=MjM5OTMxMzA4NQ==&mid=209275637&idx=2&sn=1b6e279e33a0e161ac94458808497eb2#rd)  
+11、[应该知道的linux技巧](http://mp.weixin.qq.com/s?__biz=MjM5OTMxMzA4NQ==&mid=211813036&idx=2&sn=d41f2d6bb5af2b8646c7f6a78eb18318#rd)  
 
 
 ---  

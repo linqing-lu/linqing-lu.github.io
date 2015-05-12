@@ -9,10 +9,9 @@
   <meta name="author" content="卢林清">
 
   
-  <meta name="description" content="1、阮一峰：React入门实例教程：写的通俗易懂，真的很适合入门，结合demo，瞬间能理解react
-2、轻松学习之一&ndash;Objective-C消息转发:看完就明白了Objective-C消息转发是怎么一回事了
-3、iOS应用架构谈：开篇:一个架构师关于架构的观点，值得仔细揣摩
-4、 &hellip;">
+  <meta name="description" content="问题: 今天在开发的过程中，遇到一个奇怪的问题：
+编写一个程序启动时的引导界面，用一个UIImageView控件加载一张图片作为背景，@1x图片分辨率为640*960(像素)，@2x图片分辨率为640*1136(像素)，@3x图片分辨率为750*1334(像素)。
+在iphone4S上， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +67,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/05/12/ios-ping-mu-shi-pei/">iOS屏幕适配</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-05-12T13:36:34+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:36 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>问题:</h3>
+
+<p>今天在开发的过程中，遇到一个奇怪的问题：<br/>
+编写一个程序启动时的引导界面，用一个UIImageView控件加载一张图片作为背景，@1x图片分辨率为640*960(像素)，@2x图片分辨率为640*1136(像素)，@3x图片分辨率为750*1334(像素)。<br/>
+在iphone4S上，如果背景尺寸设置为屏幕尺寸([[UIScreen mainScreen] bounds].size) ,那么@1x的图片会被压缩；如果背景尺寸设置为图片尺寸，则背景超出了屏幕范围；<br/>
+在iphone6 Plus上，如果背景尺寸设置为图片尺寸，则图片不能铺满整个屏幕。
+为了搞清楚这个问题的原因，去google了iOS界面适配方面的文章，终于明白了其中的原理，并确定解决方案。</p>
+
+<h3>原理:</h3>
+
+<h5>分辨率和像素</h5>
+
+<p>经新xcode6模拟器验证()分辨率为pt，像素为真实pixel):  1.iPhone5分辨率320x568，像素640x1136，@2x   2.iPhone6分辨率375x667，像素750x1334，@2x     3.iPhone6 Plus分辨率414x736，像素1242x2208，@3x，（注意，在这个分辨率下渲染后，图像等比降低pixel分辨率至1080p(1080x1920)</p>
+
+<p><img src="http://cdn.cocimg.com/cms/uploads/allimg/140912/4196_140912103755_1.jpg" alt="图片" /></p>
+
+<h3>解决方案:</h3>
+
+<h3>参考：</h3>
+
+<p><a href="http://blog.csdn.net/houseq/article/details/40051207">iOS界面适配(三)</a><br/>
+<a href="http://hjcapple.github.io/2014/10/10/iphone-screen.html">iphone屏幕适配，历史及现状</a>:从历史说起，写的非常容易理解。<br/>
+<a href="http://hjcapple.github.io/2014/12/14/ios-size.html">iOS开发中的各种尺寸</a>:收藏，以方便查询</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -275,37 +325,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/01/29/ioskai-fa-wen-ti-ji-jin/">iOS开发问题集锦</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-01-29T20:52:09+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:52 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在iOS开发的过程中，遇到了不少坑，在这里，我把这些坑和对应的解决方法列出。</p>
-
-<p>1.在iphone5s中，屏幕上下方有黑色空白。<a href="http://blog.csdn.net/tcthek/article/details/42674335">解决方法</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -322,6 +341,10 @@
   <a target="_blank" href="http://duobaohezi.cn/" title="夺宝盒子" >夺宝盒子</a>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/05/12/ios-ping-mu-shi-pei/">iOS屏幕适配</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/04/24/jin-qi-hao-wen-tui-jian/">近期好文推荐</a>

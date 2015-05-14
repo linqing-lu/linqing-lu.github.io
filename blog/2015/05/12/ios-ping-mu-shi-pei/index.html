@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>iOS开发问题集锦 - 老卢的试验田</title>
+  <title>iOS屏幕适配 - 老卢的试验田</title>
   <meta name="author" content="卢林清">
 
   
-  <meta name="description" content="在iOS开发的过程中，遇到了不少坑，在这里，我把这些坑和对应的解决方法列出。 1.在iphone5s中，屏幕上下方有黑色空白。解决方法
-">
+  <meta name="description" content="问题: 今天在开发的过程中，遇到一个奇怪的问题：
+编写一个程序启动时的引导界面，用一个UIImageView控件加载一张图片作为背景，@1x图片分辨率为640*960(像素)，@2x图片分辨率为640*1136(像素)，@3x图片分辨率为750*1334(像素)。
+在iphone4S上， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="//blog/2015/01/29/ioskai-fa-wen-ti-ji-jin/">
+  <link rel="canonical" href="//blog/2015/05/12/ios-ping-mu-shi-pei/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="老卢的试验田" type="application/atom+xml">
@@ -69,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">iOS开发问题集锦</h1>
+      <h1 class="entry-title">iOS屏幕适配</h1>
     
     
       <p class="meta">
@@ -78,16 +79,36 @@
 
 
 
-<time class='entry-date' datetime='2015-01-29T20:52:09+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:52 pm</span></time>
+<time class='entry-date' datetime='2015-05-12T13:36:34+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:36 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>在iOS开发的过程中，遇到了不少坑，在这里，我把这些坑和对应的解决方法列出。</p>
+<div class="entry-content"><h3>问题:</h3>
 
-<p>1.在iphone5s中，屏幕上下方有黑色空白。<a href="http://blog.csdn.net/tcthek/article/details/42674335">解决方法</a></p>
+<p>今天在开发的过程中，遇到一个奇怪的问题：<br/>
+编写一个程序启动时的引导界面，用一个UIImageView控件加载一张图片作为背景，@1x图片分辨率为640*960(像素)，@2x图片分辨率为640*1136(像素)，@3x图片分辨率为750*1334(像素)。<br/>
+在iphone4S上，如果背景尺寸设置为屏幕尺寸([[UIScreen mainScreen] bounds].size) ,那么@1x的图片会被压缩；如果背景尺寸设置为图片尺寸，则背景超出了屏幕范围；<br/>
+在iphone6 Plus上，如果背景尺寸设置为图片尺寸，则图片不能铺满整个屏幕。
+为了搞清楚这个问题的原因，去google了iOS界面适配方面的文章，终于明白了其中的原理，并确定解决方案。</p>
+
+<h3>原理:</h3>
+
+<h5>分辨率和像素</h5>
+
+<p>经新xcode6模拟器验证()分辨率为pt，像素为真实pixel):  1.iPhone5分辨率320x568，像素640x1136，@2x   2.iPhone6分辨率375x667，像素750x1334，@2x     3.iPhone6 Plus分辨率414x736，像素1242x2208，@3x，（注意，在这个分辨率下渲染后，图像等比降低pixel分辨率至1080p(1080x1920)</p>
+
+<p><img src="http://cdn.cocimg.com/cms/uploads/allimg/140912/4196_140912103755_1.jpg" alt="图片" /></p>
+
+<h3>解决方案:</h3>
+
+<h3>参考：</h3>
+
+<p><a href="http://blog.csdn.net/houseq/article/details/40051207">iOS界面适配(三)</a><br/>
+<a href="http://hjcapple.github.io/2014/10/10/iphone-screen.html">iphone屏幕适配，历史及现状</a>:从历史说起，写的非常容易理解。<br/>
+<a href="http://hjcapple.github.io/2014/12/14/ios-size.html">iOS开发中的各种尺寸</a>:收藏，以方便查询</p>
 </div>
 
 
@@ -103,7 +124,7 @@
 
 
 
-<time class='entry-date' datetime='2015-01-29T20:52:09+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:52 pm</span></time>
+<time class='entry-date' datetime='2015-05-12T13:36:34+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:36 pm</span></time>
       
 
 <span class="categories">
@@ -155,10 +176,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/01/28/iosxue-xi-zi-yuan-ji-jin/" title="Previous Post: iOS学习资源集锦">&laquo; iOS学习资源集锦</a>
+        <a class="basic-alignment left" href="/blog/2015/04/24/jin-qi-hao-wen-tui-jian/" title="Previous Post: 近期好文推荐">&laquo; 近期好文推荐</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/02/11/core-animationbian-cheng-zhi-nan-yao-dian-ji-jin/" title="Next Post: Core Animation编程指南要点集锦">Core Animation编程指南要点集锦 &raquo;</a>
       
     </p>
   </footer>

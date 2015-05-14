@@ -17,7 +17,10 @@ categories: 杂谈
 9、[iOS:Crash文件解析(一)](http://www.cnblogs.com/smileEvday/p/Crash1.html):学习如何分析Crash文件，这应该是一个iOS开发者必会的基本技能吧。  
 10、[简明vim练级攻略](http://mp.weixin.qq.com/s?__biz=MjM5OTMxMzA4NQ==&mid=209275637&idx=2&sn=1b6e279e33a0e161ac94458808497eb2#rd)  
 11、[应该知道的linux技巧](http://mp.weixin.qq.com/s?__biz=MjM5OTMxMzA4NQ==&mid=211813036&idx=2&sn=d41f2d6bb5af2b8646c7f6a78eb18318#rd)  
-
+12、[Objective-C中不同方式实现锁](http://www.tanhao.me/pieces/643.html/)  
+13、[GCD使用经验技巧浅谈](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=206035231&idx=5&sn=d31ab1f6c3577d8727054f52c8f66c4d#rd)  
+14、[程序员必须知道的10大算法及其详解](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=206285714&idx=1&sn=7776a36992025c49b9d0173d444f7ce6#rd)  
+15、[32个算法](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=206186721&idx=3&sn=31bda96beee96e4c76818ed96a1ecb72#rd)
 
 ---  
 “平时学习控件，按照，继承关系、生命周期、内存管理、常用场景、个性定制、常见的坑。按照这个写个小博文。可能会好一些。” [知乎评论](http://www.zhihu.com/question/28997860)

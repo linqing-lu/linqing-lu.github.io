@@ -15,6 +15,8 @@ categories: iOS开发
 [Why's Blog](http://blog.callmewhy.com/): 有干货   
 [casatwy.com](http://casatwy.com)   
 [jiajun.org](http://jiajun.org)  
+[老谭笔记](http://www.tanhao.me)  
+[南峰子的技术博客](http://southpeak.github.io/blog/archives/)  
 ##资源网站
 [CocoaChina](http://www.cocoachina.com)  
 

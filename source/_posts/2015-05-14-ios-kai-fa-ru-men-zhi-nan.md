@@ -16,6 +16,19 @@ categories: iOS开发
 现在苹果的swift已经出来了一年了，如果是个人开发者，可以从swift开始进行学习。   
 理解Objectiv-c的内存管理，ARC和MRC的区别和联系，retain、assign、copy、strong、weak等关键词的含义；
 
+###核心知识点  
+#####UIViewController
+#####UIView
+#####UITableView
+#####protocol
+#####KVO
+#####按钮事件、触摸事件
+#####通知(NSNotificationCenter)
+#####GCD
+#####网络
+#####存储
+
+
 ###核心框架  
 #####Foundation  
 

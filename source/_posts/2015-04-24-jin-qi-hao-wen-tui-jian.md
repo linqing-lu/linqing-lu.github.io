@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "近期好文推荐"
-date: 2015-04-24 11:30:50 +0800
+date: 2015-05-28 11:30:50 +0800
 comments: true  
 categories: 杂谈
 ---
@@ -20,7 +20,9 @@ categories: 杂谈
 12、[Objective-C中不同方式实现锁](http://www.tanhao.me/pieces/643.html/)  
 13、[GCD使用经验技巧浅谈](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=206035231&idx=5&sn=d31ab1f6c3577d8727054f52c8f66c4d#rd)  
 14、[程序员必须知道的10大算法及其详解](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=206285714&idx=1&sn=7776a36992025c49b9d0173d444f7ce6#rd)  
-15、[32个算法](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=206186721&idx=3&sn=31bda96beee96e4c76818ed96a1ecb72#rd)
+15、[32个算法](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=206186721&idx=3&sn=31bda96beee96e4c76818ed96a1ecb72#rd)  
+16、[Objective-C类成员变量深度剖析](http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&mid=206233994&idx=1&sn=1d3379abb1cec9306d40efc38910434e#rd):王晓磊的这篇文章通过一句反大家直觉的结论：OC的->不是简单的取地址操作，从而引出了苹果的runtime特性，介绍了苹果是如何通过 Non Fragile ivars 来保证程序的二进制兼容性的，是一篇值得大家学习的好文章。  
+17、[使用symbolicatecrash分析crash文件](http://blog.csdn.net/u012703795/article/details/44806487)  
 
 ---  
 “平时学习控件，按照，继承关系、生命周期、内存管理、常用场景、个性定制、常见的坑。按照这个写个小博文。可能会好一些。” [知乎评论](http://www.zhihu.com/question/28997860)

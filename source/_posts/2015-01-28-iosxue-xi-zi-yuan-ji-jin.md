@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "iOS学习资源集锦"
-date: 2015-01-28 19:56:33 +0800
+date: 2015-05-27 19:56:33 +0800
 comments: true
 categories: iOS开发
 ---

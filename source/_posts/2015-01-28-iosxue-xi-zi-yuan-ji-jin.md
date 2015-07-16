@@ -17,6 +17,7 @@ categories: iOS开发
 [jiajun.org](http://jiajun.org)  
 [老谭笔记](http://www.tanhao.me)  
 [南峰子的技术博客](http://southpeak.github.io/blog/archives/)  
+[DeltaX](http://deltax.me/):有一些质量不错的文章值得看    
 ##资源网站
 [CocoaChina](http://www.cocoachina.com)  
 

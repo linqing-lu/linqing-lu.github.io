@@ -23,7 +23,7 @@ categories: iOS开发
 	A:</b> atomic, strong, readwrite
 
 5. <b>[※※※]用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？
-	A:</b>
+	A:</b>copy关键字表示拥有不同的内存空间，存放的时同样的内容，对一处的修改不会影响到另一处；strong关键字表示指针指向的内存空间时同一处，只是引用计数增加，对一个指针所指内容的修改会影响另一个指针。
 
 6. [※※※]@synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？
 7. [※※※※※]在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？

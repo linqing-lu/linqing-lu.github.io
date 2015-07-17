@@ -27,11 +27,22 @@ categories: iOS开发
 
 6. [※※※]@synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？
 7. [※※※※※]在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？
-8. [※※]objc中向一个nil对象发送消息将会发生什么？
-9. [※※※]objc中向一个对象发送消息[obj foo]和objc_msgSend()函数之间有什么关系？
-10. [※※※]什么时候会报unrecognized selector的异常？
+8. [※※]objc中向一个nil对象发送消息将会发生什么？ 
+	A:什么也不会发生，不会崩溃，也不会接收对应的消息。
+	
+9. [※※※]objc中向一个对象发送消息[obj foo]和objc_msgSend()函数之间有什么关系？  
+	A:[参考此文](http://imhehe.lofter.com/post/1d0d0dea_60691be)
+
+10. [※※※]什么时候会报unrecognized selector的异常？  
+	A: 发送消息是通过 objc_send(id, SEL, ...) 来实现的，它会首先在对象的类对象的 cache，method list 以及父类对象的 cache, method list 中依次查找 SEL 对应的 IMP；如果没有找到且实现了动态方法决议机制就会进行决议，如果没有实现动态方法决议机制或决议失败且实现了消息转发机制就会进入消息转发流程，否则程序 crash。也就是说如果同时提供了动态方法决议和消息转发，那么动态方法决议先于消息转发，只有当动态方法决议依然无法正确决议 selector 的实现，才会尝试进行消息转发。
 11. [※※※※]一个objc对象如何进行内存布局？（考虑有父类的情况）
 12. [※※※※]一个objc对象的isa的指针指向什么？有什么作用？
+	A: Objective-C中的Object是一个结构体(struct)，第一个成员是isa，指向自己的class。这是在objc/objc.h中定义的。  
+<pre><code>
+typedef struct objc_object {
+    Class isa;
+} *id;
+</pre></code>  
 13. [※※※※]下面的代码输出什么？  
 <pre><code>
 @implementation Son : Father
@@ -45,9 +56,9 @@ categories: iOS开发
     return self;
 }
 @end
-</code></pre>
-14. [※※※※]runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）
-15. [※※※※]使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？
+</code></pre>  
+14. [※※※※]runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法法）
+15. 15. [※※※※]使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？
 16. [※※※※※]objc中的类方法和实例方法有什么本质区别和联系？
 17. [※※※※※]_objc_msgForward函数是做什么的，直接调用它将会发生什么？
 18. [※※※※※]runtime如何实现weak变量的自动置nil？

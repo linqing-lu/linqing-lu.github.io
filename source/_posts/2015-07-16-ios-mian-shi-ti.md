@@ -34,7 +34,7 @@ categories: iOS开发
 	A:[参考此文](http://imhehe.lofter.com/post/1d0d0dea_60691be)
 
 10. [※※※]什么时候会报unrecognized selector的异常？  
-	A: 发送消息是通过 objc_send(id, SEL, ...) 来实现的，它会首先在对象的类对象的 cache，method list 以及父类对象的 cache, method list 中依次查找 SEL 对应的 IMP；如果没有找到且实现了动态方法决议机制就会进行决议，如果没有实现动态方法决议机制或决议失败且实现了消息转发机制就会进入消息转发流程，否则程序 crash。也就是说如果同时提供了动态方法决议和消息转发，那么动态方法决议先于消息转发，只有当动态方法决议依然无法正确决议 selector 的实现，才会尝试进行消息转发。
+	A: 发送消息是通过 objc_send(id, SEL, ...) 来实现的，它会首先在对象的类对象的 cache，method list 以及父类对象的 cache, method list 中依次查找 SEL 对应的 IMP；如果没有找到且实现了动态方法决议机制就会进行决议，如果没有实现动态方法决议机制或决议失败且实现了消息转发机制就会进入消息转发流程，否则程序 crash。也就是说如果同时提供了动态方法决议和消息转发，那么动态方法决议先于消息转发，只有当动态方法决议依然无法正确决议 selector 的实现，才会尝试进行消息转发。[此文中有详细讲解](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=208901553&idx=5&sn=0aeb4d0f21dec6bef3b540becd0c9683#rd)  
 11. [※※※※]一个objc对象如何进行内存布局？（考虑有父类的情况）
 12. [※※※※]一个objc对象的isa的指针指向什么？有什么作用？
 	A: Objective-C中的Object是一个结构体(struct)，第一个成员是isa，指向自己的class。这是在objc/objc.h中定义的。  

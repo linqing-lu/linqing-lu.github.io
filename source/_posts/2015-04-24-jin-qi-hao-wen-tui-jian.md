@@ -29,6 +29,8 @@ categories: 杂谈
 20、[深入理解RunLoop](http://www.cocoachina.com/ios/20150601/11970.html#rd):满篇都是干货，值得多读细读。  
 21、[优化UITableViewCell高度计算的那些事](http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/)、[UITableView优化技巧](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=207223968&idx=1&sn=dbc82adf7e4891c9a94fb18e5b6973ee&scene=5#rd):又刷新了对UITableView的认识。    
 22、[Objective-C特性：Runtime](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=208901553&idx=5&sn=0aeb4d0f21dec6bef3b540becd0c9683#rd)  
+23、[知其然亦知其所以然--NSOperation并发编程](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=401333885&idx=3&sn=831a1289e0d2069d4326198c8a677818&scene=0#wechat_redirect)  
+24、[如何让iOS界面保持流畅](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=401307836&idx=1&sn=d4105ac1560bac661d703c1b54ccce5e&scene=0#wechat_redirect)  
 
 ---  
 “平时学习控件，按照，继承关系、生命周期、内存管理、常用场景、个性定制、常见的坑。按照这个写个小博文。可能会好一些。” [知乎评论](http://www.zhihu.com/question/28997860)

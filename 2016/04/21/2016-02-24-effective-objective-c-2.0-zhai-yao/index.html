@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="layout: posttitle: “《Effective Objective-C 2.0》摘要”date: 2016-02-24 17:19:12 +0800comments: true
+categories: iOS开发  ===[Toc]  
+===  
+##第一章 熟悉Objective-C     
+###第1条：了解Objective-C语言的起源  
+#####要点：
+
+Obje">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/04/21/2016-02-24-effective-objective-c-2.0-zhai-yao/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="layout: posttitle: “《Effective Objective-C 2.0》摘要”date: 2016-02-24 17:19:12 +0800comments: true
+categories: iOS开发  ===[Toc]  
+===  
+##第一章 熟悉Objective-C     
+###第1条：了解Objective-C语言的起源  
+#####要点：
+
+Obje">
+<meta property="og:updated_time" content="2016-03-04T06:50:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="layout: posttitle: “《Effective Objective-C 2.0》摘要”date: 2016-02-24 17:19:12 +0800comments: true
+categories: iOS开发  ===[Toc]  
+===  
+##第一章 熟悉Objective-C     
+###第1条：了解Objective-C语言的起源  
+#####要点：
+
+Obje">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-02-24-effective-objective-c-2.0-zhai-yao" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/21/2016-02-24-effective-objective-c-2.0-zhai-yao/" class="article-date">
+  <time datetime="2016-04-21T04:49:01.622Z" itemprop="datePublished">2016-04-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>layout: post<br>title: “《Effective Objective-C 2.0》摘要”<br>date: 2016-02-24 17:19:12 +0800<br>comments: true</p>
+<h2 id="categories-iOS开发"><a href="#categories-iOS开发" class="headerlink" title="categories: iOS开发  "></a>categories: iOS开发  </h2><p>===<br>[Toc]  </p>
+<p>===  </p>
+<p>##第一章 熟悉Objective-C     </p>
+<p>###第1条：了解Objective-C语言的起源  </p>
+<p>#####要点：</p>
+<ul>
+<li>Objective-C为C语言添加了面向对象特性，是其超集。Objective-C使用动态绑定的消息结构，也就是说，在运行时才会检查对象类型。接收一条消息之后，究竟应该执行何种代码，由运行环境而非编译器来决定。</li>
+<li>理解C语言的核心概念有助于写好Objective-C程序，尤其要掌握内存模型与指针。</li>
+</ul>
+<p>###第2条：在类的头文件中尽量少引入其他头文件    </p>
+<p>#####要点：</p>
+<ul>
+<li>除非却有必要，否则不要引入头文件。一般来说，应在某个类的头文件中使用前置声明来提及别的类，并在实现文件中引入那些类的头文件。这样做可以尽量降低类之间的耦合；</li>
+<li>有时无法使用前置声明，比如要声明的某个类遵循一项协议。这种情况下，尽量把“该类遵循某协议”这条声明移至“class-continuation”分类中。如果不行的话，就把协议单独放在一个头文件中，然后将其引入。</li>
+</ul>
+<p>###第3条：多用子面量语法，少用与之等价的方法   </p>
+<p>#####要点：</p>
+<ul>
+<li>应该使用字面量语法来创建字符串、数值、数组、字典。与创建此类对象的常规方法相比，这么做更加简明扼要；</li>
+<li>应该通过取下标操作来访问数组下标或字典中的键所对应的元素；</li>
+<li>用字面量语法创建数组或字典时，若值中有nil，则会抛出异常，因此，务必确保值里不含nil.</li>
+<li>字面量语法有个限制：除了字符串以外，所创建出来的对象必须属于Foundation框架才行。</li>
+</ul>
+<p>###第4条：多用类型常量，少用#define预处理指令    </p>
+<p>#####要点：</p>
+<ul>
+<li>不要用预处理指令定义常量。这样定义出来的常量不含类型信息，编译器只是会在编译前据此执行查找与替换操作。即使有人重新定义了常量的值，编译器也不会产生警告信息，这将导致应用程序中常量值不一致。</li>
+<li>在实现文件中使用static const来定义“只在编译单元内可见的常量”。由于此类常量不在全局符号表中，所以无须为其名称加前缀；</li>
+<li>在头文件中使用extern来声明全局常量，并在相关的实现文件中定义其值。这种常量要出现在全局符号表中，所以其名称应加以区隔，通常用与之相关的类名做前缀。</li>
+</ul>
+<p>###第5条：用枚举表示状态、选项。状态码    </p>
+<p>#####要点：</p>
+<ul>
+<li>应该用枚举来表示状态机的状态、传递给方法的选项以及状态码等值，给这些值起个易懂的名字；</li>
+<li>如果把传递给某个方法的选项表示为枚举类型，而多个选项又可同时使用，那么就将各选项值定义为2的幂，以便通过按位或操作将其组合起来；</li>
+<li>用NS_ENUM与NS_OPTIONS宏来定义枚举类型，并指明其底层数据类型。这样做可以确保枚举是用开发者所选的底层数据类型实现出来的，而不会采用编译器所选的类型；</li>
+<li>在处理枚举类型的switch语句中不要实现default分支。这样的话，加入新枚举之后，编译器就会提示开发者：switch语句并未处理所有枚举。</li>
+</ul>
+<p>===  </p>
+<p>##第二章 对象、消息、Runtime</p>
+<p>###第6条：理解“属性”这一概念    </p>
+<p>#####要点：</p>
+<ul>
+<li>可以用@property语法来定义对象中所封装的数据；</li>
+<li>通过“特质”来指定存储数据所需的正确语义；</li>
+<li>在设置属性所对应的实例变量时，一定要遵从该属性所声明的语义；</li>
+<li>开发iOS程序时应该使用nonatomic属性，因为atomic属性会严重影响性能。  </li>
+</ul>
+<p>###第7条：在对象内部尽量直接访问实例变量    </p>
+<p>#####要点：</p>
+<ul>
+<li>在对象内部读取数据时，应该直接访问实例变量来读，而写入数据时，则应该通过属性来写；</li>
+<li>在初始化方法及dealloc方法中，总是应该直接通过实例变量来读写数据；</li>
+<li>有时会使用惰性初始化技术配置某份数据，这种情况下，需要通过属性来读取数据。</li>
+</ul>
+<p>###第8条：理解“对象等同性”这一概念   </p>
+<p>#####要点：</p>
+<ul>
+<li>若想检测对象的等同性，请提供isEqual与hash方法；</li>
+<li>相同的对象必须具有相同的哈希码，但是两个哈希码相同的对象却未必相同；</li>
+<li>不要盲目地逐个检测每条属性，而是应该依据具体需求来制定检测方案；</li>
+<li>编写hash方法时，应该使用计算速度快而且哈希码碰撞几率低的算法。</li>
+</ul>
+<p>###第9条：以“类族模式”隐藏实现细节    </p>
+<p>#####要点：</p>
+<ul>
+<li>类族模式可以把实现细节隐藏在一套简单的公共接口后面；</li>
+<li>系统框架中经常使用类族；</li>
+<li>从类族的公共抽象基类中继承子类时要当心，若有开发文档，则应首先阅读。 </li>
+</ul>
+<p>###第10条：在既有类中使用关联对象存放自定义数据    </p>
+<p>#####要点：</p>
+<ul>
+<li>可以通过“关联对象”机制来把两个对象连起来；</li>
+<li>定义关联对象时可指定内存管理语义，用以模仿定义属性时所采用的“拥有关系”与“非拥有关系”；</li>
+<li>只有在其他做法不可行时才应选用关联对象，因为这种做法通常会引入难于查找的BUG。</li>
+</ul>
+<p>###第11条：理解objc_msgSend的作用      </p>
+<p>#####要点：</p>
+<ul>
+<li>消息由接收者、选择子及参数构成。给某对象“发送消息”也就相当于在该对象上“调用方法”；</li>
+<li>发给某对象的全部消息要由“动态消息派发系统”来处理，该系统会查出对应的方法，并执行其代码。</li>
+</ul>
+<p>###第12条：理解消息转发机制    </p>
+<p>#####要点：</p>
+<ul>
+<li>若对象无法响应某个选择子，则进入消息转发流程；</li>
+<li>通过运行期的动态方法解析功能，我们可以在需要用到某个方法时再将其加入类中；</li>
+<li>对象可以把无法解读的某些选择子转交给其他对象来处理；</li>
+<li>经过上述两步之后，如果还是没有办法处理选择子，那就启动完整的消息转发机制。</li>
+</ul>
+<p>###第13条：用“方法调配技术”调试“黑盒方法”    </p>
+<p>#####要点：</p>
+<ul>
+<li>在运行期，可以向类中新增或替换选择子所对应的方法实现；</li>
+<li>使用另一份实现来替换原有的方法实现，这道工序叫做“方法调配(Method swizzing)”，开发者常用此技术向原有实现中添加新功能；</li>
+<li>一般来说，只有调试程序的时候才需要在运行期修改方法的实现，这种做法不宜滥用；</li>
+</ul>
+<p>###第14条：理解“类对象”的用意    </p>
+<p>#####要点：</p>
+<ul>
+<li>每个实例都有一个指向Class对象的指针(isa)，用以表明其类型，而这些Class对象则构成了类的继承体系；</li>
+<li>如果对象类型无法在编译器确定，那么就应该使用类型信息查询(isKindOf:)的方法来探知;</li>
+<li>尽量使用类型信息查询方法来确定对象的类型，而不要直接比较类对象，因为某些对象可能实现了消息转发功能。</li>
+</ul>
+<p>===  </p>
+<p>##第三章 接口与API设计  </p>
+<p>###第15条：用前缀避免命名空间冲突    </p>
+<p>#####要点：</p>
+<ul>
+<li>选择与你的公司、应用程序或二者皆有关联之名称作为类名的前缀，并在所有代码中均使用这一前缀；</li>
+<li>若自己开发的程序库中用到了第三方库，则应在其中的名称上加上前缀。</li>
+</ul>
+<p>###第16条：提供“全能初始化方法”    </p>
+<p>#####要点：</p>
+<ul>
+<li>在类中提供一个全能初始化方法，并于文档里指明。其他初始化方法均应调用此方法；</li>
+<li>若全能初始化方法与超类不同，则需覆写超类中对应的方法；</li>
+<li>如果超类的初始化方法不适用于子类，那么应该覆写这个超类方法，并在其中抛出异常。</li>
+</ul>
+<p>###第17条：实现description方法    </p>
+<p>#####要点：</p>
+<ul>
+<li>实现description方法返回一个有意义的字符串，用以描述该实例；</li>
+<li>若想在调试时打印出更详尽的对象描述信息，则应实现debugDescription方法。</li>
+</ul>
+<p>###第18条：尽量使用不可变对象    </p>
+<p>#####要点：</p>
+<ul>
+<li>尽量创建不可变的对象；</li>
+<li>若某属性仅可于对象内部修改，则在“class-continuation分类”中将其由readonly属性扩展为readwrite属性；</li>
+<li>不要把可变的collection作为属性公开，而应提供相关方法，以此修改对象中的可变collection。</li>
+</ul>
+<p>###第19条：使用清洗而协调的命名方式      </p>
+<p>#####要点：</p>
+<ul>
+<li>起名时应遵从标准的Objective-C命名规范，这样创建出来的接口更容易为开发者所理解；</li>
+<li>方法名要言简意赅，从左至右读起来要像个日常用语中的句子才好；</li>
+<li>方法名里不要使用缩略后的类型名称；</li>
+<li>给方法起名时的第一要务就是确保其风格与你自己的代码或所要继承的框架相符。</li>
+</ul>
+<p>###第20条：为私有方法名加前缀      </p>
+<p>#####要点：</p>
+<ul>
+<li>给私有方法的名称加上前缀，这样可以很容易地将其同公共方法区分开；</li>
+<li>不要单用一个下划线做私有方法的前缀，因为这种做法是预留给苹果公司用的。</li>
+</ul>
+<p>###第21条：理解Objective-C错误模型      </p>
+<p>#####要点：</p>
+<ul>
+<li>只有发生了可使整个应用程序崩溃的严重错误时，才应使用异常；</li>
+<li>在错误不那么严重的情况下，可以指派“委托方法”来处理错误，也可以把错误信息放在NSError对象里，经由“输出参数”返回给调用者。</li>
+</ul>
+<p>###第22条：理解NSCopying协议      </p>
+<p>#####要点：</p>
+<ul>
+<li>若想令自己缩写的对象具有拷贝功能，则需实现NSCopying协议；</li>
+<li>如果自定义的对象分为可变版本和不可变版本，那么就要同时实现NSCopying与NSMutableCopying协议。</li>
+<li>复制对象时需决定采用浅拷贝还是深拷贝，一般情况下应该尽量执行浅拷贝；</li>
+<li>如果所写的对象需要深拷贝，那么可考虑新增一个专门执行深拷贝的方法。</li>
+</ul>
+<p>=== </p>
+<p>##第四章 协议与分类  </p>
+<p>###第23条：通过委托与数据源协议进行对象间通信   </p>
+<p>#####要点：</p>
+<ul>
+<li>委托模式为对象提供了一套接口，使其可以由此将相关事件告知其他对象；</li>
+<li>将委托对象应该支持的接口定义成协议，在协议中把可能需要处理的事件定义成方法；</li>
+<li>当某对象需要从另外一个对象中获取数据时，可以使用委托模式。这种情境下，该模式亦称“数据源协议(data source protocol)”;</li>
+<li>若有必要，可实现含有位段的结构体，将委托对象是否能够响应相关协议方法这一信息缓存至其中。</li>
+</ul>
+<p>###第24条：将类的实现代码分散到便于管理的数个Category之中    </p>
+<p>#####要点：</p>
+<ul>
+<li>使用分类机制把类的实现代码划分成易于管理的小块；</li>
+<li>将应该视为“私有”的方法归入名叫Private的分类中，以隐藏实现细节。</li>
+</ul>
+<p>###第25条：总是为第三方类的分类名称加前缀  </p>
+<ol>
+<li>分类机制通常用于向无源码的既有类中新增功能；这个特性极为强大，但也容易产生问题：分类中所实现的每个方法都会在runtime加载分类时直接添加在类的方法列表中，如果类中本来就有此方法，而分类又实现了一次，那么分类中的方法会覆盖原来那一份实现代码，还可能会发生多次覆盖：后加入的覆盖先加入的，多次覆盖的结果已最后一个分类为准。  </li>
+<li>想在Objective-C中实现命名空间功能，只有一个办法：就是给相关名称都加上某个共用的前缀。  </li>
+<li>如果向某个类的分类中加入方法，在应用程序中，该类的每个实例均可调用这些方法。  </li>
+</ol>
+<p>#####要点：</p>
+<ul>
+<li>向第三方类中添加分类时，总应该给其名称加上你专用的前缀，给其中的方法名称加上你专用的前缀。  </li>
+</ul>
+<p>###第26条：勿在分类中声明属性  </p>
+<ol>
+<li>属性是封装数据的方式，表达的意思是:类中有数据在支持着它；属性只是定义实例变量及相关存取方法的“语法糖”；类所封装的全部数据都应该定义在主接口中，这里是唯一能够定义实例变量(也就是数据)的地方。</li>
+<li>虽然从技术上说是可以在分类中声明属性的，但要避免这种做法，因为：除了“class-continuation”分类之外，其他分类都无法向类中新增实例变量，导致无法合成实现属性所需的实例变量（例外：可以声明为@dynamic表示在运行期使用消息转发机制实现）；   </li>
+<li>分类机制只是一种手段，目标在于扩展类的功能，而非封装数据；  </li>
+</ol>
+<p>#####要点：</p>
+<ul>
+<li>把封装数据所用的全部属性都定义在主接口里；</li>
+<li>在“class-continuation”分类之外的其他分类中，可以定义存取方法，但尽量不要定义属性。  </li>
+</ul>
+<p>###第27条：使用“class-continuation”分类隐藏实现细节  </p>
+<ol>
+<li>Objective-C的动态消息系统的工作方式决定了其不可能实现真正的私有方法或私有实例变量。</li>
+<li>“class-continuation”分类必须定义在其所接续的那个类的实现文件里，这是唯一能声明实例变量的分类，而且此分类没有特定的实现文件，其中的方法都应该定义在类的主实现文件里；</li>
+<li>编写Objective-C++代码时，“class-continuation”分类尤为游泳，因为某些情况下，必须用C++来编码；所有应用C++代码的实现文件都必须以.mm为后缀；</li>
+<li>“class-continuation”分类还有一种合理用法：将public接口中声明未“只读”的属性扩展未“可读写”，以便在类的内部设置其值，这样既能令外界无法修改对象，又能在其内部按照需要管理其数据；  </li>
+<li>若对象所遵从的协议只应视为私有，则可在“class-continuation”分类中声明。  </li>
+</ol>
+<p>#####要点：</p>
+<ul>
+<li>通过“class-continuation”分类向类中新增实例变量；</li>
+<li>如果某属性在主接口中声明未“只读”，而类的内部又要用设置方法修改此属性，那么就在“class-continuation”分类中将其扩展未“可读写”；</li>
+<li>把私有方法的原型声明在“class-continuation”分类里面；</li>
+<li>若想使类所遵循的协议不为人所知，则可于“class-continuation”分类中声明。  </li>
+</ul>
+<p>###第28条：通过协议提供匿名对象  </p>
+<p>#####要点：</p>
+<ul>
+<li>协议可在某种程度上提供匿名类型。具体的对象类型可以淡化成遵从某种协议的id类型(id<protocol>，匿名对象)，协议里规定了对象所应实现的方法；</protocol></li>
+<li>使用匿名对象来隐藏类型名称（或类名）；</li>
+<li><h1 id="如果具体类型不重要，重要的是对象能够响应（定义在协议里的）特定方法，那么可以使用匿名对象来表示；"><a href="#如果具体类型不重要，重要的是对象能够响应（定义在协议里的）特定方法，那么可以使用匿名对象来表示；" class="headerlink" title="如果具体类型不重要，重要的是对象能够响应（定义在协议里的）特定方法，那么可以使用匿名对象来表示；  "></a>如果具体类型不重要，重要的是对象能够响应（定义在协议里的）特定方法，那么可以使用匿名对象来表示；  </h1></li>
+</ul>
+<p>##第五章 内存管理  </p>
+<p>###第29条：通过协议提供匿名对象  </p>
+<ol>
+<li>Objective-C通过引用计数来管理内存。每个对象都有一个计数器，其值表明还有多少个其他对象想令此对象继续存活。对象创建好之后，其引用计数大于0.retain和release操作会分别使该计数递增及递减，当计数变为0时，对象就为系统所回收并摧毁了。<br>#####要点：</li>
+</ol>
+<ul>
+<li>引用计数机制通过可以递增递减的计数器来管理内存。对象创建好之后，其保留计数至少为1.若保留计数为正，则对象继续存活。当保留计数将为0时，对象就被销毁了。</li>
+<li>在对象生命期中，其余对象通过引用来保留或释放此对象。保留与释放操作分别会递增或递减保留计数。</li>
+</ul>
+<p>###第30条：以ARC简化引用计数  </p>
+<p>#####要点：</p>
+<ul>
+<li>有ARC之后，程序员就无须担心内存管理问题了。使用ARC来编程，可省去类中的许多“样板代码”；</li>
+<li>ARC管理对象生命期的办法基本上就是：在合适的地方插入“保留”及“释放”操作。在ARC环境下，变量的内存管理语义可以通过修饰符指明，而原来则需要手工执行“保留”及“释放”操作；</li>
+<li>由方法所返回的对象，其内存管理语义总是通过方法名来体现，ARC将此确定为开发者必须能遵守的守则；</li>
+<li>ARC只负责管理Objective-C对象的内存。尤其要注意：CoreFoundation对象不归ARC管理，开发者必须适时调用CFRetain/CFRelease;</li>
+</ul>
+<p>###第31条：在dealloc方法中只释放引用并解除监听  </p>
+<p>#####要点：  </p>
+<ul>
+<li>在dealloc方法里，应该做的事情就是释放指向其他对象的引用，并取消原来订阅的KVO或NSNotificationCenter等通知，不要做其他事情；</li>
+<li>如果对象持有文件描述符等系统资源，那么应该专门编写一个方法来释放此种资源。这样的类要和其使用者约定：用完资源后必须调用close方法；</li>
+<li>执行异步任务的方法不应该在dealloc里调用；只能在正常状态下执行的那些方法页不应在dealloc里调用，因为此时对象已处于正在回收的状态了；</li>
+<li>在dealloc中也不要调用属性的存取方法，因为有人可能会覆写这些方法，并于其中做一些无法在回收阶段安全执行的操作；另外，属性可能处于KVO机制的监控之下，观察者可能会在属性值改变的时候“保留”或使用这个即将回收的对象。</li>
+</ul>
+<p>###第32条：编写“异常安全代码”时留意内存管理问题  </p>
+<ol>
+<li>在当前的运行时系统中，C++与Objective-C的异常相互兼容：从其中一门语言里抛出的异常能用另外一门语言所编写的“异常处理程序”来捕获；</li>
+<li>在发现大量异常捕获操作时，应考虑重构代码，用第21条的NSError式错误信息传递法来取代异常。  </li>
+</ol>
+<p>#####要点：  </p>
+<ul>
+<li>捕获异常时，一定要注意将try块内所创立的对象清理干净；</li>
+<li>在默认情况下，ARC不生成安全处理异常所需的清理代码。开启编译器标志-fobjc-arc-exception后，可生成这种代码，但会导致应用程序变大，而且会降低允许效率。  </li>
+</ul>
+<p>###第33条：以弱引用避免保留环  </p>
+<p>#####要点：</p>
+<ul>
+<li>将某些引用设为weak，可以避免出现“保留环”；</li>
+<li>weak引用可以自动清空，页可以不自动清空。自动清空是随着ARC而引入的新特性，由运行时系统实现。在具备自动清空功能的弱引用上，可以随意读取其数据，因为这种引用不会指向已经回收过的对象。</li>
+</ul>
+<p>###第34条：以“自动释放池块”降低内存峰值  </p>
+<p>#####要点：  </p>
+<ul>
+<li>自动释放池排布在栈中，对象受到autorelease消息后，系统将其放入最顶端的池里；</li>
+<li>合理运用自动释放池，可降低应用程序的内存峰值；</li>
+<li>@autoreleasepool这种新式写法能创建出更为轻便的自动释放池。</li>
+</ul>
+<p>###第35条：用“僵尸对象(Zombie Object)”调试内存管理问题</p>
+<p>#####要点：  </p>
+<ul>
+<li>系统在回收对象时，可以不将其真的回收，而是把它转化为僵尸对象。通过环境变量NSZombieEnabled可开启此功能；</li>
+<li>系统会修改对象的isa指针，令其指向特殊的僵尸类，从而使该对象变为僵尸对象。僵尸类能够响应所有的选择子，响应式为：打印一条包含消息内容及其接收者的消息，然后终止程序。</li>
+</ul>
+<p>###第36条：不要使用retainCount</p>
+<ol>
+<li>retainCount的绝对数值一般都与开发者所应留意的事情完全无关，即便只在调试时才调用此方法，通常还是无所助益的；</li>
+<li>retainCount返回的引用计数只是某个给定时间点上的值，并未考虑到系统会稍后把自动释放池清空，因此不会将后续的操作从返回值里减去。</li>
+<li>retainCount可能永远不返回0，因为有时系统会优化对象的释放行为，在引用计数还是1的时候就把它回收了。</li>
+</ol>
+<p>#####要点：</p>
+<ul>
+<li>对象的retainCount看似有用，实则不然，因为任何给定时间点上的“绝对引用计数”都无法反映对象生命周期的全貌；</li>
+<li>引入ARC之后，retainCount方法就正式废止了，在ARC下调用该方法会导致编译器报错。</li>
+</ul>
+<p>===  </p>
+<p>##第六章 Block与GCD  </p>
+<p>###第37条：理解“block”这一概念    </p>
+<p>#####要点：</p>
+<ul>
+<li>blocks时C、C++、Objective-C中的词法闭包；</li>
+<li>block可接受参数，也可返回值；</li>
+<li>block可以分配在栈或堆上，也可以时全局的。分配在栈上的块可拷贝到堆里，这样的话。就和标准的Objective-C对象一样，具备引用计数了。</li>
+</ul>
+<p>###第38条：为常用的块类型创建typedef  </p>
+<p>#####要点：</p>
+<ul>
+<li>以typedef重新定义块类型，可令块变量用起来更加简单；</li>
+<li>定义新类型时应遵从现有的命名习惯，勿使其名称与别的类型相冲突；</li>
+<li>不妨为同一个块签名定义多个类型别名。如果要重构的代码使用了块类型的某个别名，那么只需要修改相应typedef中的块签名即可，无需改动其他typedef。</li>
+</ul>
+<p>###第39条：用handle块降低代码分散程度  </p>
+<ol>
+<li>委托模式有个缺点：如果类要分别使用多个获取器下载不同数据，那么就得在delegate回调方法里根据传入的获取器参数来切换。<br>#####要点：</li>
+</ol>
+<ul>
+<li>在创建对象时，可以使用内联的handler块将相关业务逻辑一并声明；</li>
+<li>在有多个实例需要监控时，如果采用委托模式，那么经常需要根据传入的对象来切换，而若改用handler块来实现，则可直接将块与相关对象放在一起；</li>
+<li>设计API时如果用到了handler块，那么可以增加一个参数，使调用者可通过此参数来决定该把块安排在哪个队列上执行。</li>
+</ul>
+<p>###第40条：用块引用其所属对象时不要出现保留环    </p>
+<p>#####要点：</p>
+<ul>
+<li>如果块所捕获的对象直接或间接地保留了块本身，那么就得担心保留环问题；</li>
+<li>一定要找个适当的实际解除保留环，而不能把责任推给API的调用者。</li>
+</ul>
+<p>###第41条：多用派发队列，少用同步锁    </p>
+<p>#####要点：</p>
+<ul>
+<li>派发队列可用来表述同步语义，这种做法要比使用@synchronized块或NSLock对象简单；</li>
+<li>将同步与异步派发结合起来，可以实现与普通加锁机制一样的的同步行为，而这么做却不会阻塞执行异步派发的线程；</li>
+<li>使用同步队列及栅栏块，可以令同步行为更加高效。</li>
+</ul>
+<p>###第42条：多用GCD，少用performSelector系列方法    </p>
+<p>#####要点：</p>
+<ul>
+<li>performSelector系列方法在内存管理方面容易有疏失。它无法确定将要执行的选择子具体时什么，因而ARC编译器也就无法插入适当的内存管理方法；</li>
+<li>performSelector系列方法所能处理的选择子太过局限了，选择子的返回值类型及发送给方法的参数个数都受到限制。</li>
+<li>如果想把任务放在另一个线程上执行，那么最好不要用performSelector系列方法，而是应该把任务封装到块里，然后调用GCD机制的相关方法来实现。</li>
+</ul>
+<p>###第43条：掌握GCD及操作队列的使用时机  </p>
+<p>#####要点：</p>
+<ul>
+<li>在解决多线程与任务管理问题时，派发队列并非唯一的方案；</li>
+<li>操作队列提供了一套高层的Objective-C API，能实现纯GCD所具备的绝大部分功能，而且还能完成一些更为复杂的操作，那些操作若改用GCD来实现，则需要另外编写代码。</li>
+</ul>
+<p>###第44条：通过Dispatch Group机制，根据系统资源状况来执行任务    </p>
+<p>#####要点：</p>
+<ul>
+<li>一系列任务可归入一个dispatch group之中。开发者可以在这组任务执行完毕时获得通知；</li>
+<li>通过dispatch group，可以在并发式派发队列里同时执行多项任务。此时GCD会根据系统资源状况来调度这些并发执行的任务。开发者若自己来实现此功能，则需要编写大量代码。</li>
+</ul>
+<p>###第45条：使用dispatch_once来执行只需运行一次的线程安全代码  </p>
+<p>#####要点：</p>
+<ul>
+<li>经常需要编写“只需执行一次的线程安全代码”，通过GCD所提供的dispatch_once函数，很容易就能实现此功能；</li>
+<li>标记(token)应该声明在static或global作用域中，这样的话，在把只需执行一次的块传给dispatch_once函数时，传进去的标记也是相同的。</li>
+</ul>
+<p>###第46条：不要使用dispatch_get_current_queue    </p>
+<p>#####要点：</p>
+<ul>
+<li>dispatch_get_current_queue函数的行为常常与开发者所预期的不同。此函数已经废弃，只应做调试之用；</li>
+<li>由于派发队列时按层级来组织的，所以无法单用某个队列对象来描述“当前队列”这一概念；</li>
+<li>dispatch_get_current_queue函数用于解决由不可重入的代码所引发的死锁，然而能用此函数解决的问题，通常也能用“队列特有数据(queue-specific data)”来解决。</li>
+</ul>
+<p>===  </p>
+<p>##第七章 系统框架  </p>
+<p>###第47条：熟悉系统框架  </p>
+<ol>
+<li>Foundation:NSObject、NSArray、NSDictionary</li>
+<li>CoreFoundation</li>
+<li>无缝桥接技术</li>
+<li>CFNetwork</li>
+<li>CoreAudio</li>
+<li>AVFoundation</li>
+<li>CoreData</li>
+<li>CoreText</li>
+<li>UIKit/AppKit</li>
+<li>CoreAnimation</li>
+<li>CoreGraphics</li>
+<li>QuartzCore</li>
+<li>MapKit等</li>
+</ol>
+<p>#####要点：</p>
+<ul>
+<li>许多系统框架都可以直接使用，其中最重要的时Foundation和CoreFoundation，这两个框架提供了构建应用程序所需的许多核心功能。</li>
+<li>许多常见的任务都能用框架来做，例如音频与视频处理、网络通信、数据管理等；</li>
+<li>请记住：<b>用纯C写成的框架与用Ojbective-C写成的一样重要，若想成为优秀的Objective-C开发者，应该掌握C语言的核心概念。</b>  </li>
+</ul>
+<p>###第48条：多用块枚举，少用for循环  </p>
+<p>#####要点：</p>
+<ul>
+<li>遍历collection有四种方式。最基本的办法时for循环，其次是NSEnumerator遍历法及快速遍历法，<b>最新、最先进的是“块枚举法”</b>；</li>
+<li>“块枚举法”本身就能通过GCD来并发执行遍历操作，无需另行编写代码。而采用其他遍历方式则无法轻易实现这一点；</li>
+<li>若提前知道待遍历的collection含有何种对象，则应修改块签名，指出对象的具体类型。</li>
+</ul>
+<p>###第49条：对自定义其内存管理语义的collection使用无缝桥接  </p>
+<p>#####要点：</p>
+<ul>
+<li>通过使用无缝桥接技术，可以在Foundation框架中的Objective-C对象与CoreFoundation框架中的C语言数据结构之间来回转换；</li>
+<li>在CoreFoundation层面创建collection时，可以指定许多回调函数，这些函数表示此collection应如何处理其元素。然后，可以运用无缝桥接技术，将其转换成具备特殊内存管理语义的Objective-C collection。</li>
+</ul>
+<p>###第50条：构建缓存时选用NSCache而非NSDictionary  </p>
+<p>#####要点：</p>
+<ul>
+<li>实现缓存时应选用NSCache而非NSDictionary对象。因为NSCache可以提供优雅的自动删减功能，而且是线程安全的，此外，它与字典不同，并不会拷贝键；</li>
+<li>可以给NSCache对象设置上限，用以限制缓存中的的对象总个数及“总成本”，而这些尺度则定义了缓存删减其中对象的时机。但是绝对不要把这些尺度当成可靠的“硬限制”，它们仅对NSCache起指导作用；</li>
+<li>将NSPurgeableData与NSCache搭配使用，可实现自动清除数据功能，也就是说，当NSPurgeableData对象所占内存为系统所丢弃时，该对象自身也会从缓存中移除；</li>
+<li>如果缓存使用得当，那么应用程序的响应速度就能提高。只有那种“重新计算起来很费事”的数据，才值得放入缓存，比如那些需要从网络获取或从磁盘读取的数据。</li>
+</ul>
+<p>###第51条：精简initialize和load的实现代码<br>+ (void)load;<br>+ (void)initialize;  </p>
+<p>#####要点：  </p>
+<ul>
+<li>load尽量不用；</li>
+<li>在加载阶段，如果类实现了load方法，那么系统就会调用它。分类里也可以定义此方法，类的load方法要比分类中的先调用。与其他方法不同，load方法不参与覆写机制；</li>
+<li>首次使用某个类之前，系统会向其发送initialize消息。由于此方法遵从普通的覆写规则，所以通常应该在里面判断当前要初始化的是哪个类。</li>
+<li>load与initialize方法都应该实现得精简一些，这有助于保持应用程序的响应能力，也能减少引入“依赖环”的几率；</li>
+<li>无法在编译期设定的全局变量，可以放在initialize方法里初始化；</li>
+</ul>
+<p>###第52条：别忘了NSTimer会保留其目标对象 </p>
+<p>#####要点：</p>
+<ul>
+<li>NSTimer对象会保留其目标，直到计时器本身失效为止，调用invalidate方法可令计时器失效，另外，一次性的计时器在触发完成任务之后也会失效；</li>
+<li>反复执行任务的计时器，很容易引入保留环，如果这种计时器的目标对象又保留了计时器本身，那肯定会导致保留环。而这种环状保留关系，可能是直接发生的，也可能是通过对象图里的其他对象间接发生的；</li>
+<li>可以通过Category的方式扩充NSTimer的功能，用block来打破保留环。不过，除非NSTimer将来在公共接口里提供此功能，否则必须创建Category，将相关实现代码加入其中。  </li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/21/2016-02-24-effective-objective-c-2.0-zhai-yao/" data-id="cin9t67jr000h8u8fsqrz3y32" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/21/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/21/2015-12-02-instrumentsde-shi-yong/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/04/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2016-02-24-effective-objective-c-2.0-zhai-yao/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-12-02-instrumentsde-shi-yong/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-09-18-ios-ji-neng-ti-sheng-lu-jing/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-07-16-ios-mian-shi-ti/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

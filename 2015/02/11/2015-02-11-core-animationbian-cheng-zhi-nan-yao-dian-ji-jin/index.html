@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Core Animation编程指南要点集锦 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##1 在UIView中初始化动画如果你想使用Core Animation初始化动画，你必须在一个基于视图的动画块内部执行所有Core Animaiton调用。UIView类默认是关闭图层动画的，你在动画块之外所做的改变都不是动画，但是你可在动画块中重新启用图层动画。清单3-5展示了一个关于如何隐式改变图层opacity和显式改变图层的position例子，在例子中myNewPosition变量被">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Core Animation编程指南要点集锦">
+<meta property="og:url" content="http://yoursite.com/2015/02/11/2015-02-11-core-animationbian-cheng-zhi-nan-yao-dian-ji-jin/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##1 在UIView中初始化动画如果你想使用Core Animation初始化动画，你必须在一个基于视图的动画块内部执行所有Core Animaiton调用。UIView类默认是关闭图层动画的，你在动画块之外所做的改变都不是动画，但是你可在动画块中重新启用图层动画。清单3-5展示了一个关于如何隐式改变图层opacity和显式改变图层的position例子，在例子中myNewPosition变量被">
+<meta property="og:updated_time" content="2015-05-15T05:25:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Core Animation编程指南要点集锦">
+<meta name="twitter:description" content="##1 在UIView中初始化动画如果你想使用Core Animation初始化动画，你必须在一个基于视图的动画块内部执行所有Core Animaiton调用。UIView类默认是关闭图层动画的，你在动画块之外所做的改变都不是动画，但是你可在动画块中重新启用图层动画。清单3-5展示了一个关于如何隐式改变图层opacity和显式改变图层的position例子，在例子中myNewPosition变量被">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2015-02-11-core-animationbian-cheng-zhi-nan-yao-dian-ji-jin" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/11/2015-02-11-core-animationbian-cheng-zhi-nan-yao-dian-ji-jin/" class="article-date">
+  <time datetime="2015-02-11T09:25:40.000Z" itemprop="datePublished">2015-02-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Core Animation编程指南要点集锦
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##1 在UIView中初始化动画<br>如果你想使用Core Animation初始化动画，你必须在一个基于视图的动画块内部执行所有Core Animaiton调用。UIView类默认是关闭图层动画的，你在动画块之外所做的改变都不是动画，但是你可在动画块中重新启用图层动画。清单3-5展示了一个关于如何隐式改变图层opacity和显式改变图层的position例子，在例子中myNewPosition变量被事先计算并被块所捕获。两个动画都开始于相同的时间，但透明度动画使用默认的定时，而位置动画使用动画对象指定的定时。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/11/2015-02-11-core-animationbian-cheng-zhi-nan-yao-dian-ji-jin/" data-id="cin9t67jc00068u8f5uawafd5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/05/27/2015-01-28-iosxue-xi-zi-yuan-ji-jin/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          iOS学习资源集锦
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/29/2015-01-29-ioskai-fa-wen-ti-ji-jin/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS开发问题集锦</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/04/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2016-02-24-effective-objective-c-2.0-zhai-yao/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-12-02-instrumentsde-shi-yong/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-09-18-ios-ji-neng-ti-sheng-lu-jing/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-07-16-ios-mian-shi-ti/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

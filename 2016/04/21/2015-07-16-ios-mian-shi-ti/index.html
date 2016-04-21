@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="layout: posttitle: “iOS面试题”date: 2015-07-16 11:50:50 +0800comments: true
+categories: iOS开发  参考文章：这篇文章中提到一些iOS面试题，把这些题的答案都搞明白了，对iOS开发的理解也会理解的更透彻，本文摘取其中一部分回答。  
+
+[※]@property中有哪些属性关键字？ A: atomic(默认)，no">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/04/21/2015-07-16-ios-mian-shi-ti/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="layout: posttitle: “iOS面试题”date: 2015-07-16 11:50:50 +0800comments: true
+categories: iOS开发  参考文章：这篇文章中提到一些iOS面试题，把这些题的答案都搞明白了，对iOS开发的理解也会理解的更透彻，本文摘取其中一部分回答。  
+
+[※]@property中有哪些属性关键字？ A: atomic(默认)，no">
+<meta property="og:updated_time" content="2015-07-17T05:32:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="layout: posttitle: “iOS面试题”date: 2015-07-16 11:50:50 +0800comments: true
+categories: iOS开发  参考文章：这篇文章中提到一些iOS面试题，把这些题的答案都搞明白了，对iOS开发的理解也会理解的更透彻，本文摘取其中一部分回答。  
+
+[※]@property中有哪些属性关键字？ A: atomic(默认)，no">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2015-07-16-ios-mian-shi-ti" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/21/2015-07-16-ios-mian-shi-ti/" class="article-date">
+  <time datetime="2016-04-21T04:49:01.618Z" itemprop="datePublished">2016-04-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>layout: post<br>title: “iOS面试题”<br>date: 2015-07-16 11:50:50 +0800<br>comments: true</p>
+<h2 id="categories-iOS开发"><a href="#categories-iOS开发" class="headerlink" title="categories: iOS开发  "></a>categories: iOS开发  </h2><p><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&amp;mid=208981739&amp;idx=1&amp;sn=c5001053ef521375a9ab553dbc6a8d47#rd" target="_blank" rel="external">参考文章</a>：这篇文章中提到一些iOS面试题，把这些题的答案都搞明白了，对iOS开发的理解也会理解的更透彻，本文摘取其中一部分回答。  </p>
+<ol>
+<li><b>[※]@property中有哪些属性关键字？<br> A:</b> atomic(默认)，nonatomic；retain, copy, assign(默认); strong(ARC下默认), weak; readonly, readwrite(默认);<br> <a href="http://www.linuxidc.com/Linux/2014-03/97744.htm" target="_blank" rel="external">参考文章1</a><br> <a href="http://blog.csdn.net/dqjyong/article/details/7668601" target="_blank" rel="external">参考文章2</a>  </li>
+<li><p><b>[※]weak属性需要在dealloc中置nil么?<br> A:</b> 当strong类型的指针被释放掉之后，所有的指向同一个对象的weak指针都会被清零。所以不需要中dealloc中置nil；<br> ARC里面的dealloc方法和MRC手动内存管理的区别在于。ARC里面不能调用super方法。ARC里面的dealloc一般用来注销NSNotification或者timer之类的实例。如果是类里面的强引用，可以在didReceiveMemoryWarning置于nil;</p>
+</li>
+<li><p><b>[※※]@synthesize和@dynamic分别有什么作用？<br> A:</b>@synthesize实际的意义就是 自动生成属性的setter和getter方法。<br> @dynamic 就是要告诉编译器，代码中用@dynamic修饰的属性，其getter和setter方法会在程序运行的时候或者用其他方式动态绑定，以便让编译器通过编译。其主要的作用就是用在NSManagerObject对象的属性声明上，由于此类对象的属性一般是从Core Data的属性中生成的，core data 框架会在程序运行的时候为此类属性生成getter和setter方法。</p>
+</li>
+<li><p><b>[※※※]ARC下，不显示指定任何属性关键字时，默认的关键字都有哪些？<br> A:</b> atomic, strong, readwrite</p>
+</li>
+<li><p><b>[※※※]用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？<br> A:</b>copy关键字表示拥有不同的内存空间，存放的时同样的内容，对一处的修改不会影响到另一处；strong关键字表示指针指向的内存空间时同一处，只是引用计数增加，对一个指针所指内容的修改会影响另一个指针。</p>
+</li>
+<li><p>[※※※]@synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？</p>
+</li>
+<li>[※※※※※]在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？</li>
+<li><p>[※※]objc中向一个nil对象发送消息将会发生什么？<br> A:什么也不会发生，不会崩溃，也不会接收对应的消息。</p>
+</li>
+<li><p>[※※※]objc中向一个对象发送消息[obj foo]和objc_msgSend()函数之间有什么关系？<br> A:<a href="http://imhehe.lofter.com/post/1d0d0dea_60691be" target="_blank" rel="external">参考此文</a></p>
+</li>
+<li><p>[※※※]什么时候会报unrecognized selector的异常？<br>A: 发送消息是通过 objc_send(id, SEL, …) 来实现的，它会首先在对象的类对象的 cache，method list 以及父类对象的 cache, method list 中依次查找 SEL 对应的 IMP；如果没有找到且实现了动态方法决议机制就会进行决议，如果没有实现动态方法决议机制或决议失败且实现了消息转发机制就会进入消息转发流程，否则程序 crash。也就是说如果同时提供了动态方法决议和消息转发，那么动态方法决议先于消息转发，只有当动态方法决议依然无法正确决议 selector 的实现，才会尝试进行消息转发。<a href="http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&amp;mid=208901553&amp;idx=5&amp;sn=0aeb4d0f21dec6bef3b540becd0c9683#rd" target="_blank" rel="external">此文中有详细讲解</a>  </p>
+</li>
+<li>[※※※※]一个objc对象如何进行内存布局？（考虑有父类的情况）</li>
+<li>[※※※※]一个objc对象的isa的指针指向什么？有什么作用？<br>A: Objective-C中的Object是一个结构体(struct)，第一个成员是isa，指向自己的class。这是在objc/objc.h中定义的。<br><pre><code><br>typedef struct objc_object {<br>Class isa;<br>} *id;<br></code></pre>  </li>
+<li>[※※※※]下面的代码输出什么？<br><pre><code><br>@implementation Son : Father</code></pre></li>
+</ol>
+<ul>
+<li>(id)init<br>{<br>  self = [super init];<br>  if (self) {<pre><code>NSLog(@&quot;%@&quot;, NSStringFromClass([self class]));
+NSLog(@&quot;%@&quot;, NSStringFromClass([super class]));
+</code></pre>  }<br>  return self;<br>}<br>@end<br>  </li>
+</ul>
+<ol>
+<li>[※※※※]runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法法）</li>
+<li><ol>
+<li>[※※※※]使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？</li>
+</ol>
+</li>
+<li>[※※※※※]objc中的类方法和实例方法有什么本质区别和联系？</li>
+<li>[※※※※※]_objc_msgForward函数是做什么的，直接调用它将会发生什么？</li>
+<li>[※※※※※]runtime如何实现weak变量的自动置nil？</li>
+<li>[※※※※※]能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</li>
+<li>[※※※]runloop和线程有什么关系?</li>
+<li>[※※※]runloop的mode作用是什么？</li>
+<li>[※※※※]以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</li>
+<li>[※※※※※]猜想runloop内部是如何实现的？</li>
+<li>[※]objc使用什么机制管理对象内存？</li>
+<li>[※※※※]ARC通过什么方式帮助开发者管理内存？</li>
+<li>[※※※※]不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）</li>
+<li>[※※※※]BAD_ACCESS在什么情况下出现？</li>
+<li>[※※※※※]苹果是如何实现autoreleasepool的？</li>
+<li>[※※]使用block时什么情况会发生引用循环，如何解决？</li>
+<li>[※※]在block内如何修改block外部变量？</li>
+<li>[※※※]使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？</li>
+<li>[※※]GCD的队列（dispatch_queue_t）分哪两种类型？</li>
+<li>[※※※※]如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</li>
+<li>[※※※※]dispatch_barrier_async的作用是什么？</li>
+<li>[※※※※※]苹果为什么要废弃dispatch_get_current_queue？</li>
+<li>[※※※※※]以下代码运行结果如何？<br><pre><code></code></pre></li>
+</ol>
+<ul>
+<li>(void)viewDidLoad<br>{<br>  [super viewDidLoad];<br>  NSLog(@”1”);<br>  dispatch_sync(dispatch_get_main_queue(), ^{<pre><code>NSLog(@&quot;2&quot;);
+</code></pre>  });<br>  NSLog(@”3”);<br>}<br></li>
+</ul>
+<ol>
+<li>[※※]addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</li>
+<li>[※※※]如何手动触发一个value的KVO</li>
+<li>[※※※]若一个类有实例变量NSString *_foo，调用setValue:forKey:时，可以以foo还是_foo作为key？</li>
+<li>[※※※※]KVC的keyPath中的集合运算符如何使用？</li>
+<li>[※※※※]KVC和KVO的keyPath一定是属性么？</li>
+<li>[※※※※※]如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</li>
+<li>[※※※※※]apple用什么方式实现对一个对象的KVO？</li>
+<li>[※※]IBOutlet连出来的视图属性为什么可以被设置成weak?</li>
+<li>[※※※※※]IB中User Defined Runtime Attributes如何使用？</li>
+<li>[※※※]如何调试BAD_ACCESS错误</li>
+<li>[※※※]lldb（gdb）常用的调试命令？</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/21/2015-07-16-ios-mian-shi-ti/" data-id="cin9t67jm000e8u8f77xu3wf8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/21/2015-09-18-ios-ji-neng-ti-sheng-lu-jing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/21/2015-05-14-ios-kai-fa-ru-men-zhi-nan/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/04/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2016-02-24-effective-objective-c-2.0-zhai-yao/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-12-02-instrumentsde-shi-yong/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-09-18-ios-ji-neng-ti-sheng-lu-jing/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/21/2015-07-16-ios-mian-shi-ti/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
